@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>登录</title>
+		<script src="../../Content/js/plugIn/jquery.js"></script>
+		<link rel="stylesheet" type="text/css" href="../../Content/css/login/loginHome.css">
+
+	</head>
+	<body style="background: #fff">
+		<div id="right">
+			<div class="loginFont mar_left"style="width: 68px;margin-bottom: 0px">扫码登录</div>
+			<div class="wechatCode" id="wechatCode"></div>
+			<div style="color: #6d6d6d;text-align: center;margin-top: 150px;">请使用微信扫一扫登录</div>
+			<div class="cursorPointer userLogin"><a href="login1.html" target="iframeLoginBox">用户名登录</a></div>
+		</div>
+			
+		
+		
+		
+		<script src="../../Content/js/login.js"></script>
+		<script type="text/javascript" src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
+		<script type="text/javascript">
+			var obj = new WxLogin({
+				self_redirect:true,
+				id:"wechatCode", 
+				appid: "wxb6b60eff6e7ae1a7", 
+				scope: "snsapi_login", 
+				redirect_uri: "http://tech.portcars.cn/Login/wechat_login",
+				state: "",
+				style: "white",
+				href: ""
+			});
+			window.onload = function(){
+				$('iframe').css('transform','scale(0.7)');
+			}
+		</script>
+	</body>
+</html>

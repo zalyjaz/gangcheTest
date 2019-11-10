@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>登录</title>
+		<link rel="stylesheet" type="text/css" href="../../Content/css/login/loginHome.css">
+	</head>
+	<body>
+		<div id="right">
+			
+			<div class="loginFont mar_left">登录</div>
+
+			<div class="mar_left inputTips inputTipAccount">用户名</div>
+			<div><input type="text" name="account" class="inputText mar_left account" /></div>
+			<div class="inputTips1 noNull1">输入不能为空</div>
+			<div class="inputTips1 inputError1">用户名/手机号格式错误，请重试</div>
+			
+			<div class="mar_left inputTips inputTipPassword">密码</div>
+			<div><input type="password" name="password" class="inputText mar_left password" placeholder="" /></div>
+			<div class="inputTips1 noNull2">输入不能为空</div>
+			<div class="inputTips1 inputError2">密码错误，请重新输入</div>
+			
+			
+			<div class="mar_left checkAndFindpass">
+	            <span class="checkB cursorPointer checkboxImg">
+	            <img class="checkboxImgBox grayImg" src="../../Content/img/login/passGray.png"/>
+	            <img class="checkboxImgBox blueImg" src="../../Content/img/login/passBlue.png" style="display:none;"/>
+	            <input type="checkbox" style="border:none;"/>
+	            </span>
+	            <span class="checkB cursorPointer rememberPassword">记住密码</span>
+	            <span class="cursorPointer findPassword"><a href="login_findPass.html" target="iframeLoginBox">忘记密码</a></span>
+            </div>
+			
+			<div class="loginBtn cursorPointer"><a href="#" onclick="Login()">登录</a></div>
+			<div class="noteInfo cursorPointer"><a href="login_info.html" target="iframeLoginBox">短信验证码登录</a></div>
+
+			 <div class="wechat_icon"><a href="login_wechat.html" target="iframeLoginBox"><img src="../../Content/img/login/wechat_gray.png" /></a></div>
+
+        <div>
+            <span class="spanLine mar_left" style="margin-right: 12px;"></span>
+            <span style="display:inline-block; color: #6D6D6D;text-align: center;margin-top: 5px;">第三方登录</span>
+            <span class="spanLine" style="margin-left: 12px;"></span>
+        </div>
+		</div>
+			
+		
+		<script src="../../Content/js/plugIn/jquery.js"></script>
+		<script type="text/javascript" src="../../Content/js/login.js"></script>
+		<script type="text/javascript">
+			var ww = 0;
+			function Login(){
+				checkNull();
+				var account=$(".account").val();
+				var password=$(".password").val();
+				if (account !== "" && password !== "") {
+					 window.parent.window.location.href = '../index/contentBody.html';
+				}
+				else{
+					 // $(".inputError1,.inputError2").css("display", "block");
+			   //       $(".account,.password").css("border-bottom", "1px solid #f00");
+			          ww = ww + 1;
+				}
+				//输入错误三次提示
+		        if (ww >= 3) {
+		            layer.open({
+		                type:1,
+		                move: false,
+		                skin: 'layui-layer-lan',
+		                shade:0.01,
+		                title:['提示','color:#333;background:#f8f8f8;'],
+		                area: ['500', '250'],
+		                closeBtn: 1 ,
+		                content: '<div class="passwordThree"><dl><dd><span>您已输错三次账号或密码，是否找回密码？</span></dd><dd><a href="login1" class="loginGo">继续登录</a><a href="login_findPass" class="loginEnd">找回密码</a></dd></dl></div>'
+		            })
+		        }
+			}
+		</script>
+	</body>
+</html>

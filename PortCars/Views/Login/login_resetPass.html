@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>登录(重置密码)</title>
+		
+		<script src="../../Content/js/plugIn/jquery.js"></script>
+		<link rel="stylesheet" type="text/css" href="../../Content/css/login/loginHome.css">
+	</head>
+	<body>
+		
+		<div id="right">
+			<div class="loginFont mar_left" style="width: 70px;">重置密码</div>
+			
+			<div class="mar_left inputTips inputTipAccount">请输入新密码 (6-12为字母或数字)</div>
+			<div><input type="password" name="account" class="inputText mar_left account" /></div>
+			<div class="inputTips1 noNull1">输入不能为空</div>
+
+			<div class="mar_left inputTips inputTipPassword" style="margin-top: 15px;">请确认密码</div>
+			<div>
+				<input type="password" name="password" class="inputText mar_left password"/>
+			</div>
+			<div class="inputTips1 noNull2">输入不能为空</div>
+            <div class="mar_left checkAndFindpass">
+				
+			</div>
+
+			<div class="loginBtn cursorPointer"><a target="iframeLoginBox" onclick="resetPassword(this)">确认重置</a></div>
+			<div class="nowLogin cursorPointer"><a href="login1.html" target="iframeLoginBox">立即登录</a></div>
+			
+			<div class="layerTip" style="width: 210px;top: -146px;">两次输入的密码不一致，请重新输入</div>
+		</div>
+			
+	
+		<script src="../../Content/js/plugIn/layer/layer.js"></script>
+		<script src="../../Content/js/login.js"></script>	
+		<script>
+			
+			function resetPassword(res) {
+		        checkNull();
+		        var account = $(".account").val();
+		        var password = $(".password").val();
+		        if (account !== "" && password !== "") {
+		            if (account === password) {
+		                $(res).attr("href", "login_exchSucc.html");
+		            } else {
+		                $('.layerTip').css("display", "block");
+		                $('.layerTip').fadeIn(200);
+		                setTimeout(function () {
+		                    $('.layerTip').fadeOut(200);
+		                }, 5000)
+		            }
+		        }
+		    }
+		</script>
+	</body>
+</html>

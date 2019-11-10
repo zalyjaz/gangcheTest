@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>登录(修改成功)</title>
+		<script src="../../Content/js/plugIn/jquery.js"></script>
+		<link rel="stylesheet" type="text/css" href="../../Content/css/login/loginHome.css">
+	</head>
+	<body>
+		
+		<div id="right">
+			<div class="loginFont mar_left" style="width: 70px;">修改成功</div>
+			
+			<div class="mar_left" style="margin-top: 160px;">
+				<div style="float: left;width: 25px;height: 25px;"><img src="../../Content/img/login/修改成功图标.png"/></div>
+				<div style="float: left;font-size: 14px;height: 25px;line-height: 25px;margin-left: 10px">
+					<span style="color: #003CC8;">您的新密码已修改成功！</span>
+					<span> <label class="timeFive" style="color: gray;font-size: 16px;"> 5 </label>秒钟后将为您跳转至<label style="color: #003cc8;cursor: pointer;"> <a href="login1.html" target="iframeLoginBox">登录 </a></label>页面</span>
+				</div>
+			</div>
+		</div>
+	
+		<script src="../../Content/js/plugIn/layer/layer.js"></script>
+		<script src="../../Content/js/login.js"></script>
+		<script type="text/javascript">
+			// 修改成功后5秒跳转回登录主页面
+			var time = 5;
+	        var clearTime = null;
+        	setIntervals = setInterval(function(){
+				$('.timeFive').text(time + ' ');
+				time--;
+				if(time <= 0){
+					clearInterval(clearTime);
+					clearTime = null;
+					window.location.href = 'login1.html';
+				}
+			},1000)
+
+		</script>
+	</body>
+</html>

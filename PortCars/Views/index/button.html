@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>按钮</title>
+		<!-- <link rel="Shortcut Icon" href="../login/img/favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/main.css"> -->
+		<link rel="Shortcut Icon" href="../../Content/img/favicon.ico">
+		<link rel="stylesheet" href="../../Content/css/main.css">
+	</head>
+	<body>
+	  <div class="buttonContainer form">
+	  	<div class="btn-body">
+	  		<div class="headerTitle">
+	  			<span class="headerText-one">按钮</span>
+	  		</div>
+	  		<div class="btn-content">
+			  	<span class="headerText-two">按钮内边距左右边距为25px</span>
+			  	<div class="btn-normal">
+				  	<button class="pc-btn">按钮一</button>
+				  	<button class="pc-btn pc-btn-primary">按钮二</button>
+				  	<button class="pc-btn pc-btn-secondary">按钮三</button>
+				  	<button class="pc-btn pc-btn-primary-disabled">失效一</button>
+				  	<button class="pc-btn pc-btn-secondary-disabled">失效二</button>
+			  	<div>
+			    <span class="headerText-two">按钮内边距左右边距为25px,有弧度</span>
+			  	<div class="btn-radius">
+				  	<button class="pc-btn radius">按钮一</button>
+				  	<button class="pc-btn pc-btn-primary radius">按钮二</button>
+				  	<button class="pc-btn pc-btn-secondary radius">按钮三</button>
+				  	<button class="pc-btn pc-btn-primary-disabled radius">失效一</button>
+				  	<button class="pc-btn pc-btn-secondary-disabled radius">失效二</button>
+			  	<div>
+			  	<span class="headerText-two">按钮内边距左右边距为10px</span>
+			  	<div class="btn-small">
+				  	<button class="pc-btn-sm">按钮一</button>
+				  	<button class="pc-btn-sm pc-btn-primary">按钮二</button>
+				  	<button class="pc-btn-sm pc-btn-secondary">按钮三</button>
+				  	<button class="pc-btn-sm pc-btn-primary-disabled">失效一</button>
+				  	<button class="pc-btn-sm pc-btn-secondary-disabled">失效二</button>
+			  	<div>
+			  	<span class="headerText-two">按钮内边距左右边距为8px.高为25px</span>
+			  	<div class="btn-mini">
+				  	<button class="pc-btn-mini">按钮一</button>
+				  	<button class="pc-btn-mini pc-btn-primary">按钮二</button>
+				  	<button class="pc-btn-mini pc-btn-secondary">按钮三</button>
+				  	<button class="pc-btn-mini pc-btn-primary-disabled">失效一</button>
+				  	<button class="pc-btn-mini pc-btn-secondary-disabled">失效二</button>
+			  	<div>
+                <span class="headerText-two">链接</span>
+                <div class="link" style="margin-bottom: 20px;">
+                	<a class="pc-link">链接一</a>
+                	<a class="pc-link-blue">链接二</a>
+                	<a class="pc-link pc-blue pc-line">链接三</a>
+                	<a class="pc-link-blue pc-line">链接三</a>
+                </div>
+		  	</div>
+	  	</div>
+	  	<div class="btn-info" >
+	  		<div class="headerTitle">
+	  			<span class="headerText-two">按钮详情</span>
+	  		</div>
+	  		<table class="pc-table pc-table-auto pc-table-left">
+	  			<thead>
+	  				<tr>
+	  					<th>按钮</th>
+	  					<th>class=''</th>
+	  					<th>描述</th>
+	  				</tr>
+	  			</thead>
+	  			<tbody>
+	  				<tr>
+	  					<td>
+	  						<button class="pc-btn">按钮一</button>
+	  					</td>
+	  					<td>pc-btn</td>
+	  					<td>背景是白色的按钮</td>
+	  				</tr>
+	  				<tr>
+	  					<td>
+	  						<button class="pc-btn pc-btn-primary">按钮二</button>
+	  					</td>
+	  					<td>pc-btn pc-btn-primary</td>
+	  					<td>背景是蓝色的按钮，主要用于’保存‘ ’提交‘等主要事件</td>
+	  				</tr>
+	  				<tr>
+	  					<td>
+	  						<button class="pc-btn pc-btn-secondary">按钮三</button>
+	  					</td>
+	  					<td>pc-btn pc-btn-secondary</td>
+	  					<td>背景是浅蓝色的按钮，主要用于’取消‘ ’返回‘等次要事件</td>
+	  				</tr>
+	  				<tr>
+	  					<td>
+	  						<button class="pc-btn pc-btn-primary-disabled">失效一</button>
+	  					</td>
+	  					<td>pc-btn pc-btn-primary-disabled</td>
+	  					<td>表示主要按钮的失效，即表示不能点击</td>
+	  				</tr>
+	  				<tr>
+	  					<td>
+	  						<button class="pc-btn pc-btn-secondary-disabled">失效二</button>
+	  					</td>
+	  					<td>pc-btn pc-btn-secondary-disabled</td>
+	  					<td>表示次要按钮的失效，即表示不能点击</td>
+	  				</tr>
+	  				<tr>
+	  					<td>
+	  						<button class="pc-btn pc-btn-primary radius">按钮二</button>
+	  					</td>
+	  					<td>pc-btn pc-btn-primary radius</td>
+	  					<td>背景是蓝色的圆角按钮，主要用于’保存‘ ’提交‘等主要事件</td>
+	  				</tr>
+	  				<tr>
+	  					<td>
+	  						<button class="pc-btn-sm">按钮一</button>
+	  					</td>
+	  					<td>pc-btn-sm</td>
+	  					<td>背景是白色的按钮</td>
+	  				</tr>
+	  				<tr>
+	  					<td>
+	  						<button class="pc-btn-sm pc-btn-primary">按钮二</button>
+	  					</td>
+	  					<td>pc-btn-sm pc-btn-primary</td>
+	  					<td>背景是蓝色的按钮，主要用于’保存‘ ’提交‘等主要事件</td>
+	  				</tr>
+	  				<tr>
+	  					<td>
+	  						<button class="pc-btn-sm pc-btn-secondary">按钮三</button>
+	  					</td>
+	  					<td>pc-btn-sm pc-btn-secondary</td>
+	  					<td>背景是浅蓝色的按钮，主要用于’取消‘ ’返回‘等次要事件</td>
+	  				</tr>
+	  				<tr>
+	  					<td>
+	  						<button class="pc-btn-sm pc-btn-primary-disabled">失效一</button>
+	  					</td>
+	  					<td>pc-btn-sm pc-btn-primary-disabled</td>
+	  					<td>表示主要按钮的失效，即表示不能点击</td>
+	  				</tr>
+	  				<tr>
+	  					<td>
+	  						<button class="pc-btn-sm pc-btn-secondary-disabled">失效二</button>
+	  					</td>
+	  					<td>pc-btn-sm pc-btn-secondary-disabled</td>
+	  					<td>表示次要按钮的失效，即表示不能点击</td>
+	  				</tr>
+	  				<tr>
+	  					<td>
+	  						<button class="pc-btn-mini">按钮一</button>
+	  					</td>
+	  					<td>pc-btn-mini</td>
+	  					<td>背景是白色的按钮</td>
+	  				</tr>
+	  				<tr>
+	  					<td>
+	  						<button class="pc-btn-mini pc-btn-primary">按钮二</button>
+	  					</td>
+	  					<td>pc-btn-mini pc-btn-primary</td>
+	  					<td>背景是蓝色的按钮，主要用于’保存‘ ’提交‘等主要事件</td>
+	  				</tr>
+	  				<tr>
+	  					<td>
+	  						<button class="pc-btn-mini pc-btn-secondary">按钮三</button>
+	  					</td>
+	  					<td>pc-btn-mini pc-btn-secondary</td>
+	  					<td>背景是浅蓝色的按钮，主要用于’取消‘ ’返回‘等次要事件</td>
+	  				</tr>
+	  				<tr>
+	  					<td>
+	  						<button class="pc-btn-mini pc-btn-primary-disabled">失效一</button>
+	  					</td>
+	  					<td>pc-btn-mini pc-btn-primary-disabled</td>
+	  					<td>表示主要按钮的失效，即表示不能点击</td>
+	  				</tr>
+	  				<tr>
+	  					<td>
+	  						<button class="pc-btn-mini pc-btn-secondary-disabled">失效二</button>
+	  					</td>
+	  					<td>pc-btn-mini pc-btn-secondary-disabled</td>
+	  					<td>表示次要按钮的失效，即表示不能点击</td>
+	  				</tr>
+	  				<tr>
+	  					<td>
+	  						<button class="pc-btn-sm pc-btn-primary radius">按钮二</button>
+	  					</td>
+	  					<td>pc-btn-sm pc-btn-primary radius</td>
+	  					<td>背景是蓝色的圆角按钮，主要用于’保存‘ ’提交‘等主要事件</td>
+	  				</tr>
+	  				<tr>
+	  					<td>
+	  						<a class="pc-link">链接一</a>
+	  					</td>
+	  					<td>pc-link</td>
+	  					<td>字体黑色的链接，鼠标经过无效果</td>
+	  				</tr>
+	  				<tr>
+	  					<td>
+	  						<a class="pc-link-blue">链接二</a>
+	  					</td>
+	  					<td>pc-link-blue</td>
+	  					<td>字体蓝色的链接，鼠标经过无效果</td>
+	  				</tr>
+	  				<tr>
+	  					<td>
+	  						<a class="pc-link pc-blue pc-line">链接三</a>
+	  					</td>
+	  					<td>pc-link blue line</td>
+	  					<td>字体黑色的链接，鼠标经过字体变蓝，并添加下划线</td>
+	  				</tr>
+	  				<tr>
+	  					<td>
+	  						<a class="pc-link-blue pc-line">链接四</a>
+	  					</td>
+	  					<td>pc-link-blue line</td>
+	  					<td>字体蓝色的链接，鼠标经过添加下划线</td>
+	  				</tr>
+	  			</tbody>
+	  		</table>
+	  	</div>
+	  </div>
+	</body>
+</html>
+<!-- <script type="text/javascript" src="../Login/js/jquery-3.2.1.js"></script>
+<script type="text/javascript" src="js/main.js"></script> -->
+<script src="../../Content/js/plugIn/jquery.js"></script>
+<script src="../../Content/js/main.js"></script>

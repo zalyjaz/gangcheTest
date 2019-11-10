@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>表单</title>
+		<!-- <link rel="stylesheet" href="css/index.css">
+		<link rel="stylesheet" type="text/css" href="/css/main.css">
+		<link rel="stylesheet" href="css/pikaday.css">
+		<link rel="stylesheet" href="js/layer/theme/default/layer.css"> -->
+		<link rel="stylesheet" href="../../Content/css/index.css">
+		<link rel="stylesheet" href="../../Content/css/main.css">
+		<link rel="stylesheet" href="../../Content/css/plugIn/pikaday.css">
+		<link rel="stylesheet" href="../../Content/js/plugIn/layer/theme/default/layer.css">
+	</head>
+	<body style="overflow-y: auto !important;">
+	  <div class="formContainer form">
+	  	<div class="form-body">
+	  		<div class="headerTitle">
+	  			<span class="headerText-one">表单</span>
+	  		</div>
+
+	  		<!-- 文本框 -->
+	  		<div class="form-content">
+			  	<span class="headerText-two">一、文本框</span>
+			  	<div class="form-textContent">
+			  		<div class="text">
+					  	<span class="headerText-two">1、带边框</span>
+					    <div class="form-text">
+					     	<input type="text" >
+					    </div>
+				     </div>
+				     <div class="text">
+					  	<span class="headerText-two">2、无边框，有背景</span>
+					    <div class="form-text">
+					     	<input class="pc-text-noBorder" type="text" >
+					    </div>
+				     </div>
+				     <div class="text">
+					  	<span class="headerText-two">3、只读readonly</span>
+					    <div class="form-text">
+					     	<input class="pc-text-readonly" type="text">
+					    </div>
+				     </div>
+				     <div class="text">
+					  	<span class="headerText-two">4、禁用disabled</span>
+					    <div class="form-text">
+					     	<input class="pc-text-disabled" type="text">
+					    </div>
+				     </div>
+				      <div class="text">
+					  	<span class="headerText-two">5、默认多选文本框，可改变文本框大小</span>
+					    <div class="form-text">
+					     	<textarea class="pc-textarea"></textarea>
+					    </div>
+				     </div>
+				      <div class="text">
+					  	<span class="headerText-two">6、多选文本框，不可改变文本框大小</span>
+					    <div class="form-text">
+					     	<textarea class="pc-textarea pc-textarea-resize"></textarea>
+					    </div>
+				     </div>
+				     <div class="text">
+					  	<span class="headerText-two">6、多选文本框，不可改变文本框大小，带滚轮</span>
+					    <div class="form-text">
+					     	<textarea class="pc-textarea pc-textarea-resize pc-textarea-scroll"></textarea>
+					    </div>
+				     </div>
+			    </div>
+			  	<div class="form-info" style="margin-top:30px;">
+			  		<div class="headerTitle">
+			  			<span class="headerText-two">文本框详情</span>
+			  		</div>
+			  		<table class="pc-table pc-table-auto pc-table-left">
+			  			<thead>
+			  				<tr>
+			  					<th>文本框</th>
+			  					<th>class=''</th>
+			  					<th>描述</th>
+			  				</tr>
+			  			</thead>
+			  			<tbody>
+			  				<tr>
+			  					<td>
+			  						<input type="text" >
+			  					</td>
+			  					<td></td>
+			  					<td>默认</td>
+			  				</tr>
+			  				<tr>
+			  					<td>
+			  						<input class="pc-text-noBorder" type="text" >
+			  					</td>
+			  					<td>pc-text-noBorder</td>
+			  					<td>无边框，有背景</td>
+			  				</tr>
+			  				<tr>
+			  					<td>
+			  						<input class="pc-text-readonly" type="text">
+			  					</td>
+			  					<td>pc-text-readonly</td>
+			  					<td>无边框，有背景，只读，提交时能获取value值</td>
+			  				</tr>
+			  				<tr>
+			  					<td>
+			  						<input class="pc-text-disabled" type="text">
+			  					</td>
+			  					<td>pc-text-disabled</td>
+			  					<td>无边框，有背景，禁用，提交时不能获取value值</td>
+			  				</tr>
+			  				<tr>
+			  					<td>
+			  						<input type="text" class="radius">
+			  					</td>
+			  					<td>radius</td>
+			  					<td>默认,有圆角</td>
+			  				</tr>
+			  				<tr>
+			  					<td>
+			  						<input class="pc-text-noBorder radius" type="text" >
+			  					</td>
+			  					<td>pc-text-noBorder radius</td>
+			  					<td>无边框，有背景，有圆角</td>
+			  				</tr>
+			  				<tr>
+			  					<td>
+			  						<textarea class="pc-textarea"></textarea>
+			  					</td>
+			  					<td></td>
+			  					<td>默认，可改变大小</td>
+			  				</tr>
+			  				
+			  				<tr>
+			  					<td>
+			  						<textarea class="pc-textarea pc-textarea-resize"></textarea>
+			  					</td>
+			  					<td>pc-textarea pc-textarea-resize</td>
+			  					<td>不可改变大小，大小固定</td>
+			  				</tr>
+			  				<tr>
+			  					<td>
+			  						<textarea class="pc-textarea pc-textarea-resize pc-textarea-scroll"></textarea>
+			  					</td>
+			  					<td>pc-textarea pc-textarea-resize pc-textarea-scroll</td>
+			  					<td>固定大小，带滚轮</td>
+			  				</tr>
+		                    <tr>
+			  					<td>
+			  						<textarea class="pc-textarea radius"></textarea>
+			  					</td>
+			  					<td>radius</td>
+			  					<td>默认，可改变大小,有圆角</td>
+			  				</tr>
+			  			</tbody>
+			  		</table>
+			  	</div>
+		  	</div>
+
+            <!-- 下拉框 -->
+		  	<div class="form-content">
+			  	<span class="headerText-two">二、下拉列表</span>
+			  	<div class="form-textContent">
+			  		<div class="select">
+					  	<span class="headerText-two">1、默认</span>
+					    <div class="form-select">
+					     	<select>
+					     		<option>normal</option>
+					     		<option>focus</option>
+					     		<option>selected</option>
+					     	</select>
+					    </div>
+				     </div>
+				     <div class="select">
+					  	<span class="headerText-two">2、换图标</span>
+					    <div class="form-select">
+					     	<select class="pc-select">
+					     		<option>normal</option>
+					     		<option>focus</option>
+					     		<option>selected</option>
+					     	</select>
+					    </div>
+				     </div>
+				     <div class="select">
+					  	<span class="headerText-two">3、去边框，加背景</span>
+					    <div class="form-select">
+					     	<select class="pc-select-background">
+					     		<option>normal</option>
+					     		<option>focus</option>
+					     		<option>selected</option>
+					     	</select>
+					    </div>
+				     </div>
+				     <div class="select">
+					  	<span class="headerText-two">4、有边框，可搜索下拉框内</span>
+					    <div class="form-select">
+					     	<select class="pc-select pc-select-search1">
+							    <option value="Alfa Romeo">Alfa Romeo</option>
+							    <option value="Audi">Audi</option>
+							    <option>中国人民银行</option>
+							    <option>中国人民</option>
+							    <option>中国</option>
+							    <option>中国人民银行1</option>
+							    <option>中国人民1</option>
+							    <option>中国1</option>
+							    <option>中国人民银行2</option>
+							    <option>中国人民2</option>
+							    <option>中国2</option>
+							    <option>中国人民银行3</option>
+							    <option>中国人民3</option>
+							    <option>中国3</option>
+							    <option>中国人民银行4</option>
+							    <option>中国人民4</option>
+							    <option>中国4</option>
+							    <option>中国人民银行5</option>
+							    <option>中国人民5</option>
+							    <option>中国5</option>
+							    <option>BMW</option>
+							    <option>Citroen</option>
+							    <option>Fiat</option>
+							    <option>Ford</option>
+							    <option>Jaguar</option>
+							    <option>Jeep</option>
+							    <option>Lancia</option>
+							    <option>Land Rover</option>
+							    <option>Mercedes</option>
+							    <option>Mini</option>
+							    <option>Nissan</option>
+							    <option>Opel</option>
+							    <option>Peugeot</option>
+							    <option>Porsche</option>
+							    <option>Renault</option>
+							</select>
+					    </div>
+				     </div>
+				      <div class="select">
+					  	<span class="headerText-two">5、无边框，有背景，可搜索的下拉框</span>
+					    <div class="form-select">
+					     	<select class="pc-select-background pc-select-search2">
+							    <option value="Alfa Romeo">Alfa Romeo</option>
+							    <option value="Audi">Audi</option>
+							    <option>中国人民银行</option>
+							    <option>中国人民</option>
+							    <option>中国</option>
+							    <option>中国人民银行1</option>
+							    <option>中国人民1</option>
+							    <option>中国1</option>
+							    <option>中国人民银行2</option>
+							    <option>中国人民2</option>
+							    <option>中国2</option>
+							    <option>中国人民银行3</option>
+							    <option>中国人民3</option>
+							    <option>中国3</option>
+							    <option>中国人民银行4</option>
+							    <option>中国人民4</option>
+							    <option>中国4</option>
+							    <option>中国人民银行5</option>
+							    <option>中国人民5</option>
+							    <option>中国5</option>
+							    <option>BMW</option>
+							    <option>Citroen</option>
+							    <option>Fiat</option>
+							    <option>Ford</option>
+							    <option>Jaguar</option>
+							    <option>Jeep</option>
+							    <option>Lancia</option>
+							    <option>Land Rover</option>
+							    <option>Mercedes</option>
+							    <option>Mini</option>
+							    <option>Nissan</option>
+							    <option>Opel</option>
+							    <option>Peugeot</option>
+							    <option>Porsche</option>
+							    <option>Renault</option>
+							</select>
+					    </div>
+				     </div>
+			     </div>
+		  	
+	  	
+			  	<div class="form-info" style="margin-top:30px;">
+			  		<div class="headerTitle">
+			  			<span class="headerText-two">下拉框详情</span>
+			  		</div>
+			  		<table class="pc-table pc-table-auto pc-table-left">
+			  			<thead>
+			  				<tr>
+			  					<th>下拉框</th>
+			  					<th>class=''</th>
+			  					<th>描述</th>
+			  				</tr>
+			  			</thead>
+			  			<tbody>
+			  				<tr>
+			  					<td>
+			  						<select>
+							     		<option>normal</option>
+							     		<option>focus</option>
+							     		<option>selected</option>
+							     	</select>
+			  					</td>
+			  					<td></td>
+			  					<td>默认</td>
+			  				</tr>
+			  				<tr>
+			  					<td>
+			  						<select class="pc-select">
+							     		<option>normal</option>
+							     		<option>focus</option>
+							     		<option>selected</option>
+							     	</select>
+			  					</td>
+			  					<td>pc-select</td>
+			  					<td>下拉框的下拉按钮改变</td>
+			  				</tr>
+			  				<tr>
+			  					<td>
+			  						<select class="pc-select-background">
+							     		<option>normal</option>
+							     		<option>focus</option>
+							     		<option>selected</option>
+							     	</select>
+			  					</td>
+			  					<td>pc-select-background</td>
+			  					<td>下拉框，无边框，有背景</td>
+			  				</tr>
+			  				<tr>
+			  					<td>
+			  						<select class="pc-select pc-select-search1">
+									    <option value="Alfa Romeo">Alfa Romeo</option>
+									    <option value="Audi">Audi</option>
+									    <option>中国人民银行</option>
+									    <option>中国人民</option>
+									    <option>中国</option>
+									    <option>中国人民银行1</option>
+									    <option>中国人民1</option>
+									    <option>中国1</option>
+									    <option>中国人民银行2</option>
+									    <option>中国人民2</option>
+									    <option>中国2</option>
+									    <option>中国人民银行3</option>
+									    <option>中国人民3</option>
+									    <option>中国3</option>
+									    <option>中国人民银行4</option>
+									    <option>中国人民4</option>
+									    <option>中国4</option>
+									    <option>中国人民银行5</option>
+									    <option>中国人民5</option>
+									    <option>中国5</option>
+									    <option>BMW</option>
+									    <option>Citroen</option>
+									    <option>Fiat</option>
+									    <option>Ford</option>
+									    <option>Jaguar</option>
+									    <option>Jeep</option>
+									    <option>Lancia</option>
+									    <option>Land Rover</option>
+									    <option>Mercedes</option>
+									    <option>Mini</option>
+									    <option>Nissan</option>
+									    <option>Opel</option>
+									    <option>Peugeot</option>
+									    <option>Porsche</option>
+									    <option>Renault</option>
+									</select>
+			  					</td>
+			  					<td>pc-select pc-select-search1</td>
+			  					<td>有边框，可搜索下拉列表中的选项</td>
+			  				</tr>
+			  				<tr>
+			  					<td>
+			  						<select class="pc-select-background pc-select-search2">
+									    <option value="Alfa Romeo">Alfa Romeo</option>
+									    <option value="Audi">Audi</option>
+									    <option>中国人民银行</option>
+									    <option>中国人民</option>
+									    <option>中国</option>
+									    <option>中国人民银行1</option>
+									    <option>中国人民1</option>
+									    <option>中国1</option>
+									    <option>中国人民银行2</option>
+									    <option>中国人民2</option>
+									    <option>中国2</option>
+									    <option>中国人民银行3</option>
+									    <option>中国人民3</option>
+									    <option>中国3</option>
+									    <option>中国人民银行4</option>
+									    <option>中国人民4</option>
+									    <option>中国4</option>
+									    <option>中国人民银行5</option>
+									    <option>中国人民5</option>
+									    <option>中国5</option>
+									    <option>BMW</option>
+									    <option>Citroen</option>
+									    <option>Fiat</option>
+									    <option>Ford</option>
+									    <option>Jaguar</option>
+									    <option>Jeep</option>
+									    <option>Lancia</option>
+									    <option>Land Rover</option>
+									    <option>Mercedes</option>
+									    <option>Mini</option>
+									    <option>Nissan</option>
+									    <option>Opel</option>
+									    <option>Peugeot</option>
+									    <option>Porsche</option>
+									    <option>Renault</option>
+									</select>
+			  					</td>
+			  					<td>pc-select-background pc-select-search2</td>
+			  					<td>无边框，有背景，可搜索下拉列表中的选项</td>
+			  				</tr>
+			  			</tbody>
+			  		</table>
+			  	</div>
+		  	</div>
+
+		  	<!-- 单选和多选按钮 -->
+		  	<div class="form-content">
+			  	<span class="headerText-two">三、单选和多选按钮</span>
+			  	<div class="form-textContent">
+			  		<div class="radioAndCheckbox">
+					  	<span class="headerText-two">1、单选框</span>
+					    <div class="form-select">
+					    	<input type="radio" name="radio">默认没有选中
+					     	<input type="radio" name="radio" checked="checked">默认选中
+					     	<input type="radio" disabled="disabled">不可选(disabled)
+					     	<input type="radio" disabled="disabled" checked="checked">默认选中，不可选(disabled&checked)
+					    </div>
+				     </div><br>
+				     <div class="radioAndCheckbox">
+					  	<span class="headerText-two">2、多选框</span>
+					    <div class="form-radioAndCheckbox">
+					     	<input type="checkbox" name="">默认没选中
+					     	<input type="checkbox" checked="checked">默认选中
+					     	<input type="checkbox" disabled="disabled">不可选(disabled)
+					     	<input type="checkbox" disabled="disabled" checked="checked">默认选中，不可选(disabled&checked)
+					    </div>
+				     </div><br>
+				     <div class="radioAndCheckbox">
+					  	<span class="headerText-two">3、多选框变单选，一次有且只能选一个</span>
+					    <div class="form-radioAndCheckbox">
+					     	<input type="checkbox" class="pc-checkbox-toRadio" value="多选1">多选1
+					     	<input type="checkbox" class="pc-checkbox-toRadio" value="多选2">多选2
+					     	<input type="checkbox" class="pc-checkbox-toRadio" value="多选3">多选3
+					     	<input type="checkbox" class="pc-checkbox-toRadio" value="多选4">多选4
+					    </div>
+				     </div>
+			     </div>
+		  	
+	  	
+			  	<div class="form-info" style="margin-top:30px;">
+			  		<div class="headerTitle">
+			  			<span class="headerText-two">单选框和多选框详情</span>
+			  		</div>
+			  		<table class="pc-table pc-table-auto pc-table-left">
+			  			<thead>
+			  				<tr>
+			  					<th>单选框和复选框</th>
+			  					<th>class=''</th>
+			  					<th>描述</th>
+			  				</tr>
+			  			</thead>
+			  			<tbody>
+			  				<tr>
+			  					<td>
+			  						<input type="radio" name="radio">默认没有选中
+					     	        <input type="radio" name="radio" checked="checked">默认选中
+			  					</td>
+			  					<td></td>
+			  					<td>默认,只能选一个，两个单选框需要拥有相同的name</td>
+			  				</tr>
+			  				<tr>
+			  					<td>
+			  						<input type="checkbox" disabled="disabled">不可选(disabled)
+			  					</td>
+			  					<td></td>
+			  					<td>禁用，需disabled="disabled"</td>
+			  				</tr>
+			  				<tr>
+			  					<td>
+			  						<input type="radio" disabled="disabled" checked="checked">默认选中，不可选(disabled&checked)
+			  					</td>
+			  					<td></td>
+			  					<td>选中，禁用，需disabled="disabled" checked="checked"</td>
+			  				</tr>
+			  				<tr>
+			  					<td>
+			  						<input type="checkbox" name="">默认没选中
+			  					</td>
+			  					<td></td>
+			  					<td>默认，多选框</td>
+			  				</tr>
+			  				<tr>
+			  					<td>
+			  						<input type="checkbox" checked="checked">默认选中
+			  					</td>
+			  					<td></td>
+			  					<td>选中，需checked="checked"</td>
+			  				</tr>
+			  				<tr>
+			  					<td>
+			  						<input type="checkbox" disabled="disabled">不可选(disabled)
+			  					</td>
+			  					<td></td>
+			  					<td>禁用，需disabled="disabled"</td>
+			  				</tr>
+			  				<tr>
+			  					<td>
+			  						<input type="checkbox" disabled="disabled" checked="checked">默认选中，不可选(disabled&checked)
+			  					</td>
+			  					<td></td>
+			  					<td>选中，禁用，需disabled="disabled" checked="checked"</td>
+			  				</tr>
+			  				<tr>
+			  					<td>
+			  						<input type="checkbox" class="pc-checkbox-toRadio" value="多选1">多选1
+							     	<input type="checkbox" class="pc-checkbox-toRadio" value="多选2">多选2
+							     	<input type="checkbox" class="pc-checkbox-toRadio" value="多选3">多选3
+							     	<input type="checkbox" class="pc-checkbox-toRadio" value="多选4">多选4
+			  					</td>
+			  					<td>pc-checkbox-toRadio</td>
+			  					<td>多选，变单选，即只能选一个</td>
+			  				</tr>
+			  			</tbody>
+			  		</table>
+			  	</div>
+		  	</div>
+
+		  	<!-- 日历 -->
+		  	<div class="form-content">
+			  	<span class="headerText-two">四、日历</span>
+			  	<div class="form-textContent">
+			  		<div class="Date">
+					  	<span class="headerText-two">1、有边框的日历选择框</span>
+					    <div class="form-Date">
+					    	<input type="text" class="pc-date">
+					    </div>
+				     </div>
+				     <div class="Date">
+					  	<span class="headerText-two">2、无边框，有背景的日历选择框</span>
+					    <div class="form-Date">
+					     	<input type="text" class="pc-text-readonly pc-date">
+					    </div>
+				     </div>
+				     <div class="Date">
+					  	<span class="headerText-two">3、开始时间-结束时间,带边框</span>
+					    <div class="form-Date">
+					     	<input type="text" class="pc-date pc-date-start">
+					     	<input type="text" class="pc-date pc-date-end">
+					    </div>
+				     </div>
+				      <div class="Date">
+					  	<span class="headerText-two">4、开始时间-结束时间，无边框</span>
+					    <div class="form-Date">
+					     	<input type="text" class="pc-text-readonly pc-date pc-date-start">
+					     	<input type="text" class="pc-text-readonly pc-date pc-date-end">
+					    </div>
+				     </div>
+				     <div class="Date">
+					  	<span class="headerText-two">5、开始时间+多少天=结束时间</span>
+					    <div class="form-Date">
+					     	<input type="text" class="pc-date pc-date-begin" style="width:30%">
+					     	<input type="text" class="pc-date-deadline" placeholder="请输入期限" style="width:30%">
+					     	<input type="text" class="pc-date-finish" style="width:30%">
+					    </div>
+				     </div>
+			     </div>
+		  	
+			  	<div class="form-info" style="margin-top:30px;">
+			  		<div class="headerTitle">
+			  			<span class="headerText-two">日历详情</span>
+			  		</div>
+			  		<table class="pc-table pc-table-auto pc-table-left">
+			  			<thead>
+			  				<tr>
+			  					<th>日历</th>
+			  					<th>class=''</th>
+			  					<th>描述</th>
+			  				</tr>
+			  			</thead>
+			  			<tbody>
+			  				<tr>
+			  					<td>
+			  						<input type="text" class="pc-date">
+			  					</td>
+			  					<td>pc-date</td>
+			  					<td>默认,带边框</td>
+			  				</tr>
+			  				<tr>
+			  					<td>
+			  						<input type="text" class="pc-text-readonly pc-date">
+			  					</td>
+			  					<td>pc-text-readonly pc-date</td>
+			  					<td>无边框，加背景</td>
+			  				</tr>
+			  				<tr>
+			  					<td>
+			  						<input type="text" class="pc-date pc-date-start">
+					     	        <input type="text" class="pc-date pc-date-end">
+			  					</td>
+			  					<td>开始：pc-date pc-date-start<br>  结束：pc-date pc-date-end</td>
+			  					<td>带时间段的有边框的日历选择</td>
+			  				</tr>
+			  				<tr>
+			  					<td>
+			  						<input type="text" class="pc-text-readonly pc-date pc-date-start">
+					     	        <input type="text" class="pc-text-readonly pc-date pc-date-end">
+			  					</td>
+			  					<td>开始：pc-text-readonly<br> pc-date pc-date-start <br> 结束：pc-text-readonly pc-date pc-date-end</td>
+			  					<td>带时间段的无边框边框的日历选择</td>
+			  				</tr>
+			  				<tr>
+			  					<td>
+			  						<input type="text" class="pc-date pc-date-begin" style="width:30%">
+							     	<input type="text" class="pc-date-deadline" placeholder="请输入期限" style="width:30%">
+							     	<input type="text" class="pc-date-finish" style="width:30%">
+			  					</td>
+			  					<td>开始：pc-date pc-date-begin <br>
+			  					    期限：pc-date-deadline <br>
+			  					    到期：pc-date-finish</td>
+			  					<td>开始+期限=到期，日期计算</td>
+			  				</tr>
+			  			</tbody>
+			  		</table>
+			  	</div>
+		  	</div>
+ 
+            <!-- 输入框控制输入 -->
+		  	<div class="form-content">
+			  	<span class="headerText-two">五、输入框控制输入</span>
+			  	<div class="form-textContent">
+			  		<div class="input">
+					  	<span class="headerText-two">1、只能输入数字</span>
+					    <div class="form-input">
+					    	<input type="text" class="pc-num">
+					    </div>
+				     </div>
+				     <div class="input">
+					  	<span class="headerText-two">2、只能输入数字和小数点</span>
+					    <div class="form-input">
+					     	<input type="text" class="pc-numPoint">
+					    </div>
+				     </div>
+				     <div class="input">
+					  	<span class="headerText-two">3、只能输入汉字</span>
+					    <div class="form-input">
+					     	<input type="text" class="pc-cn">
+					    </div>
+				     </div>
+				      <div class="input">
+					  	<span class="headerText-two">4、只能输入字母</span>
+					    <div class="form-input">
+					     	<input type="text" class="pc-usa">
+					    </div>
+				     </div>
+				     <div class="input">
+					  	<span class="headerText-two">5、只能输入数字和英文</span>
+					    <div class="form-input">
+					     	<input type="text" class="pc-numUsa">
+					    </div>
+				     </div>
+				      <div class="input">
+					  	<span class="headerText-two">6、只能输入数字和中文</span>
+					    <div class="form-input">
+					     	<input type="text" class="pc-numCn">
+					    </div>
+				     </div>
+				      <div class="input">
+					  	<span class="headerText-two">7、只能输入中文和英文</span>
+					    <div class="form-input">
+					     	<input type="text" class="pc-cnUsa">
+					    </div>
+				     </div>
+				      <div class="input">
+					  	<span class="headerText-two">8、只能输入数字、中文和英文</span>
+					    <div class="form-input">
+					     	<input type="text" class="pc-numCnUsa">
+					    </div>
+				     </div>
+				      <div class="input">
+					  	<span class="headerText-two">9、只能输入中文和（）</span>
+					    <div class="form-input">
+					     	<input type="text" class="pc-cnBracket">
+					    </div>
+				     </div>
+				      <div class="input">
+					  	<span class="headerText-two">10、只能输入数字、英文和-</span>
+					    <div class="form-input">
+					     	<input type="text" class="pc-numUsaLine">
+					    </div>
+				     </div>
+				      <div class="input">
+					  	<span class="headerText-two">11、只能输入数字、英文和/</span>
+					    <div class="form-input">
+					     	<input type="text" class="pc-numUsaSep">
+					    </div>
+				     </div>
+				      <div class="input">
+					  	<span class="headerText-two">12、只能输入数字和英文、-、/</span>
+					    <div class="form-input">
+					     	<input type="text" class="pc-numUsaLineSep">
+					    </div>
+				     </div>
+				      <div class="input">
+					  	<span class="headerText-two">13、只能输入数字、英文和空格</span>
+					    <div class="form-input">
+					     	<input type="text" class="pc-numUsaSpace">
+					    </div>
+				     </div>
+				      <div class="input">
+					  	<span class="headerText-two">14、只能输入中文、英文、数字和空格</span>
+					    <div class="form-input">
+					     	<input type="text" class="pc-numCnUsaSpace">
+					    </div>
+				     </div>
+				      <div class="input">
+					  	<span class="headerText-two">15、只能输入中文、英文、数字、小数点和空格</span>
+					    <div class="form-input">
+					     	<input type="text" class="pc-numCnUsaPointSpace">
+					    </div>
+				     </div>
+				      <div class="input">
+					  	<span class="headerText-two">16、限制不能连续输入两个空格</span>
+					    <div class="form-input">
+					     	<input type="text" class="pc-onSpace">
+					    </div>
+				     </div>
+				      <div class="input">
+					  	<span class="headerText-two">17、只能输入小写字母</span>
+					    <div class="form-input">
+					     	<input type="text" class="pc-smUsa">
+					    </div>
+				     </div>
+				      <div class="input">
+					  	<span class="headerText-two">18、只能输入大写字母</span>
+					    <div class="form-input">
+					     	<input type="text" class="pc-bigUsa">
+					    </div>
+				     </div>
+			     </div>
+		  	
+			  	<div class="form-info" style="margin-top:30px;">
+			  		<div class="headerTitle">
+			  			<span class="headerText-two">控制输入详情</span>
+			  		</div>
+			  		<table class="pc-table pc-table-auto pc-table-left">
+			  			<thead>
+			  				<tr>
+			  					<th>限制输入文本框</th>
+			  					<th>class=''</th>
+			  					<th>描述</th>
+			  				</tr>
+			  			</thead>
+			  			<tbody>
+			  				<tr>
+			  					<td>
+			  						<input type="text" class="pc-num">
+			  					</td>
+			  					<td>pc-num</td>
+			  					<td>只能输入数字</td>
+			  				</tr>
+			  				<tr>
+			  					<td>
+			  						<input type="text" class="pc-numPoint">
+			  					</td>
+			  					<td>pc-numPoint</td>
+			  					<td>只能输入数字和小数点</td>
+			  				</tr>
+			  				<tr>
+			  					<td>
+			  						<input type="text" class="pc-cn">
+			  					</td>
+			  					<td>pc-cn</td>
+			  					<td>只能输入汉字</td>
+			  				</tr>
+			  				<tr>
+			  					<td>
+			  						<input type="text" class="pc-usa">
+			  					</td>
+			  					<td>pc-usa</td>
+			  					<td>只能输入英文字母</td>
+			  				</tr>
+			  				<tr>
+			  					<td>
+			  						<input type="text" class="pc-numUsa">
+			  					</td>
+			  					<td>pc-numUsa</td>
+			  					<td>只能输入数字和英文字母</td>
+			  				</tr>
+			  				<tr>
+			  					<td>
+			  						<input type="text" class="pc-numCn">
+			  					</td>
+			  					<td>pc-numCn</td>
+			  					<td>只能输入数字和汉字</td>
+			  				</tr>
+			  				<tr>
+			  					<td>
+			  						<input type="text" class="pc-cnUsa">
+			  					</td>
+			  					<td>pc-cnUsa</td>
+			  					<td>只能输入汉字和英文字母</td>
+			  				</tr>
+			  				<tr>
+			  					<td>
+			  						<input type="text" class="pc-numCnUsa">
+			  					</td>
+			  					<td>pc-numCnUsa</td>
+			  					<td>只能输入数字、汉字和英文字母</td>
+			  				</tr>
+			  				<tr>
+			  					<td>
+			  						<input type="text" class="pc-cnBracket">
+			  					</td>
+			  					<td>pc-cnBracket</td>
+			  					<td>只能输入汉字和（）</td>
+			  				</tr>
+			  				<tr>
+			  					<td>
+			  						<input type="text" class="pc-numUsaLine">
+			  					</td>
+			  					<td>pc-numUsaLine</td>
+			  					<td>只能输入数字、英文和-</td>
+			  				</tr>
+			  				<tr>
+			  					<td>
+			  						<input type="text" class="pc-numUsaSep">
+			  					</td>
+			  					<td>pc-numUsaSep</td>
+			  					<td>只能输入数字、英文和/</td>
+			  				</tr>
+			  				<tr>
+			  					<td>
+			  						<input type="text" class="pc-numUsaLineSep">
+			  					</td>
+			  					<td>pc-numUsaLineSep</td>
+			  					<td>只能输入数字、英文、-和/</td>
+			  				</tr>
+			  				<tr>
+			  					<td>
+			  						<input type="text" class="pc-numUsaSpace">
+			  					</td>
+			  					<td>pc-numUsaSpace</td>
+			  					<td>只能输入数字、英文和空格</td>
+			  				</tr>
+			  				<tr>
+			  					<td>
+			  						<input type="text" class="pc-numCnUsaSpace">
+			  					</td>
+			  					<td>pc-numCnUsaSpace</td>
+			  					<td>只能输入数字、中文、英文和空格</td>
+			  				</tr>
+			  				<tr>
+			  					<td>
+			  						<input type="text" class="pc-numCnUsaPointSpace">
+			  					</td>
+			  					<td>pc-numCnUsaPointSpace</td>
+			  					<td>只能输入数字、中文、英文、小数点和空格</td>
+			  				</tr>
+			  				<tr>
+			  					<td>
+			  						<input type="text" class="pc-onSpace">
+			  					</td>
+			  					<td>pc-onSpace</td>
+			  					<td>不能连续输入两个空格</td>
+			  				</tr>
+			  				<tr>
+			  					<td>
+			  						<input type="text" class="pc-smUsa">
+			  					</td>
+			  					<td>pc-smUsa</td>
+			  					<td>只能输入小写字母</td>
+			  				</tr>
+			  				<tr>
+			  					<td>
+			  						<input type="text" class="pc-bigUsa">
+			  					</td>
+			  					<td>pc-bigUsa</td>
+			  					<td>只能输入大写字母</td>
+			  				</tr>
+			  			</tbody>
+			  		</table>
+			  	</div>
+		  	</div>
+	  	</div>
+
+	  	<!-- 表单的布局，排列 -->
+		 <div class="form-table-content">
+		 	<span class="headerText-two">六、表单布局</span>
+		 	<table class="pc-table-form">
+		 		<thead>
+		 			<tr>
+		 				<th>
+		 					<span class="pc-form-title">默认表单页面布局</span>
+		 				</th>
+		 				<th></th>
+		 				<th></th>
+		 				<th></th>
+		 			</tr>
+		 		</thead>
+		 		<tbody>
+		 			<tr>
+		 				<td></td>
+		 				<td></td>
+		 				<td></td>
+		 				<td></td>
+		 			</tr>
+		 		</tbody>
+		 	</table>
+
+		 	<table class="pc-table-form pc-form-col437">
+		 		<thead>
+		 			<tr>
+		 				<th>
+		 					<span class="pc-form-title">四列，名字15%，内容35%</span>
+		 				</th>
+		 				<th></th>
+		 				<th></th>
+		 				<th></th>
+		 			</tr>
+		 		</thead>
+		 		<tbody>
+		 			<tr>
+		 				<td></td>
+		 				<td></td>
+		 				<td></td>
+		 				<td></td>
+		 			</tr>
+		 		</tbody>
+		 	</table>
+
+		 	<table class="pc-table-form pc-form-col423">
+		 		<thead>
+		 			<tr>
+		 				<th>
+		 					<span class="pc-form-title">四列，名字20%，内容30%</span>
+		 				</th>
+		 				<th></th>
+		 				<th></th>
+		 				<th></th>
+		 			</tr>
+		 		</thead>
+		 		<tbody>
+		 			<tr>
+		 				<td></td>
+		 				<td></td>
+		 				<td></td>
+		 				<td></td>
+		 			</tr>
+		 		</tbody>
+		 	</table>
+
+		 	<table class="pc-table-form pc-form-col6">
+		 		<thead>
+		 			<tr>
+		 				<th>
+		 					<span class="pc-form-title">六列，名字11%，内容22.3%</span>
+		 				</th>
+		 				<th></th>
+		 				<th></th>
+		 				<th></th>
+		 				<th></th>
+		 				<th></th>
+		 			</tr>
+		 		</thead>
+		 		<tbody>
+		 			<tr>
+		 				<td></td>
+		 				<td></td>
+		 				<td></td>
+		 				<td></td>
+		 				<td></td>
+		 				<td></td>
+		 			</tr>
+		 		</tbody>
+		 	</table>
+		 </div>
+         <div class="form-info" style="margin-top:30px;">
+			  		<div class="headerTitle">
+			  			<span class="headerText-two">表单布局详情</span>
+			  		</div>
+			  		<table class="pc-table pc-table-auto pc-table-left">
+			  			<thead>
+			  				<tr>
+			  					<th>布局</th>
+			  					<th>class=''</th>
+			  					<th>描述</th>
+			  				</tr>
+			  			</thead>
+			  			<tbody>
+			  				<tr>
+			  					<td>
+			  						<table class="pc-table-form">
+								 		<thead>
+								 			<tr>
+								 				<th>
+								 					<span class="pc-form-title">默认表单页面布局</span>
+								 				</th>
+								 				<th></th>
+								 				<th></th>
+								 				<th></th>
+								 			</tr>
+								 		</thead>
+								 		<tbody>
+								 			<tr>
+								 				<td></td>
+								 				<td></td>
+								 				<td></td>
+								 				<td></td>
+								 			</tr>
+								 		</tbody>
+								 	</table>
+			  					</td>
+			  					<td>pc-table-form</td>
+			  					<td>默认，宽度自适应</td>
+			  				</tr>
+			  				<tr>
+			  					<td>
+			  						<table class="pc-table-form pc-form-col437">
+								 		<thead>
+								 			<tr>
+								 				<th>
+								 					<span class="pc-form-title">四列，名字15%，内容35%</span>
+								 				</th>
+								 				<th></th>
+								 				<th></th>
+								 				<th></th>
+								 			</tr>
+								 		</thead>
+								 		<tbody>
+								 			<tr>
+								 				<td></td>
+								 				<td></td>
+								 				<td></td>
+								 				<td></td>
+								 			</tr>
+								 		</tbody>
+								 	</table>
+			  					</td>
+			  					<td>pc-table-form pc-form-col437</td>
+			  					<td>表单布局分四列，也即是15% 35% 15% 35%</td>
+			  				</tr>
+			  				<tr>
+			  					<td>
+			  						<table class="pc-table-form pc-form-col423">
+								 		<thead>
+								 			<tr>
+								 				<th>
+								 					<span class="pc-form-title">四列，名字20%，内容30%</span>
+								 				</th>
+								 				<th></th>
+								 				<th></th>
+								 				<th></th>
+								 			</tr>
+								 		</thead>
+								 		<tbody>
+								 			<tr>
+								 				<td></td>
+								 				<td></td>
+								 				<td></td>
+								 				<td></td>
+								 			</tr>
+								 		</tbody>
+								 	</table>
+			  					</td>
+			  					<td>pc-table-form pc-form-col423</td>
+			  					<td>表单布局分四列，也即是20% 30% 20% 30%</td>
+			  				</tr>
+			  				<tr>
+			  					<td>
+			  						<table class="pc-table-form pc-form-col6">
+								 		<thead>
+								 			<tr>
+								 				<th>
+								 					<span class="pc-form-title">六列，名字11%，内容22.3%</span>
+								 				</th>
+								 				<th></th>
+								 				<th></th>
+								 				<th></th>
+								 				<th></th>
+								 				<th></th>
+								 			</tr>
+								 		</thead>
+								 		<tbody>
+								 			<tr>
+								 				<td></td>
+								 				<td></td>
+								 				<td></td>
+								 				<td></td>
+								 				<td></td>
+								 				<td></td>
+								 			</tr>
+								 		</tbody>
+								 	</table>
+			  					</td>
+			  					<td>pc-table-form pc-form-col6</td>
+			  					<td>表单布局分六列<br><br>也即是11% 22.3% 11% 22.3% 11% 22.3%</td>
+			  				</tr>
+			  				<tr>
+			  					<td>
+			  						<span class="pc-form-title">表单每个小标题</span>
+			  					</td>
+			  					<td>pc-form-title</td>
+			  					<td>表单的小标题，写在th中，<xmp><span class="pc-form-title">标题</span></xmp></td>
+			  				</tr>
+			  			</tbody>
+			  		</table>
+			  	</div>
+          
+	  </div>
+	</body>
+</html>
+<!-- <script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/portCars.js"></script> -->
+<script src="../../Content/js/plugIn/jquery.js"></script>
+<script src="../../Content/js/portCars.js"></script>

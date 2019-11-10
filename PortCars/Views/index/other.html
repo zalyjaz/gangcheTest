@@ -1,0 +1,225 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>滚轮</title>
+        <link rel="stylesheet" type="text/css" href="../../Content/css/main.css">
+        <link rel="stylesheet" href="../../Content/js/plugIn/layer/theme/default/layer.css">
+    </head>
+    <body>
+    	<div class="otherContainer pc-form">
+    		<span class="pc-title-first">滚轮、分页、弹出框、表单提交、ajax调接口、页面跳转</span>
+
+            <div class="otherBody">
+            	<!-- 滚轮 -->
+	    		<div class="scrollBody">
+	    			<span class="pc-title-second">一、滚轮</span>
+	    			<div class="pc-scroll" style="width:600px;height:400px;overflow: auto;">
+	    				<h4>只要在css文件夹中写入此段代码，页面的滚动条样式就会改变，但是只限于谷歌浏览器</h4>
+	    				<div class="pc-scroll-child" style="width:800px;height:400px;border:1px solid #e1e5ec;">
+	    					<xmp>
+				/*滚轮，只对谷歌浏览器有效*/
+				/*设置横向滚动条的高度，纵向滚动条的宽度*/
+				*::-webkit-scrollbar{
+					width:6px;
+					height:8px;
+				}
+				/*横向滚动条*/
+				*::-webkit-scrollbar-thumb:horizontal{
+				    /*滚动条圆弧度*/
+				    border-radius:6px;
+				    /*滚动条背景颜色*/
+				    background-color:#e1e5ec;
+				}
+				/*纵向滚动条*/
+				*::-webkit-scrollbar-thumb:vertical{
+				    /*滚动条圆弧度*/
+					border-radius:6px;
+				    /*滚动条背景颜色*/
+					background-color:#e1e5ec;
+				}
+	    					</xmp>
+	    				</div>
+	    			</div>
+	    		</div>
+
+	    		<!-- 分页 -->
+	    		<div class="pageBody">
+	    			<span class="pc-title-second">二、分页</span>
+	    			<div class="pc-page">
+	    				<div class="first">
+	    					1、引入jquery.js文件<br>
+	    					2、引入displayPage-min.js<br>
+	    					3、在body中写分页要显示的位置,如:
+	    					    <xmp><div class="pc-page-num"></div></xmp>
+	    					4、在页面上写入此段代码：
+	    					<xmp>
+		  $(".pc-page-num").sjAjaxPager({
+		  url:'接口地址',
+		  tbody:$(''),//数据显示的位置
+		  success:function(data){
+		  //规定页面的高度，当一个页面中有多个iframe时
+		  GetIframeBodyHeight(data, 192, 'iframe1');//第一个参数：需要加载的数据、二：页面的没有数据时的高度、三：iframe父页面的的名字
+		}
+		});
+	    					</xmp>
+	    				</div>
+	    			</div>
+	    		</div>
+
+	    		<!-- 弹出框 -->
+	    		<div class="layerBody">
+	    			<span class="pc-title-second">三、layer弹出框</span>
+	    			<div class="layerContent">
+	    				<button class="pc-btn pc-btn-primary" onclick="layer1()">提示框</button>
+	    				<xmp>
+	layer.alert('提示的语句！',{
+              title:'提示',
+              shade:0.03,
+              move:false,
+              time:0,
+              skin:'layui-layer-lan',
+              closeBtn:0
+	});
+	    				</xmp>
+
+	    				<button class="pc-btn pc-btn-primary" onclick="layer2()">询问框</button>
+	    				<xmp>
+	layer.confirm('删除后不可恢复，您确定吗？',{
+              title:'提示',
+              shade:0.03,
+              move:false,
+              time:0,
+              skin:'layui-layer-lan',
+              closeBtn:0,
+              btn:['确定','取消'],
+              yes:function(index){
+                layer.close(index);
+             }
+	});
+	    				</xmp>
+
+	    				<button class="pc-btn pc-btn-primary" onclick="layer3()">保存成功后，加载新页面</button>
+	    				<xmp>
+	layer.alert('保存成功！',{
+              title:'提示',
+              shade:0.03,
+              move:false,
+              time:0,
+              skin:'layui-layer-lan',
+              closeBtn:0,
+             },function(index){
+               layer.close(index);
+               //加载新页面,填写位置
+               window.location.href='button.html';
+	});
+	    				</xmp>
+
+	    				<button class="pc-btn pc-btn-primary" onclick="layer4()">弹出新窗体</button>
+	    				<xmp>
+	layer.open({
+              title:'添加XXXX',
+              type:2,
+              shade:0.03,
+              shadeClose:false,
+              area:['80%','500px'],
+              move:false,
+              time:0,
+              content:'加载页面的地址' //若不显示滚动条，['地址','no']
+	});
+	    				</xmp>
+
+	    				<button class="pc-btn pc-btn-primary" onclick="layer5()">弹出新窗体,充满整个屏幕</button>
+	    				<xmp>
+	var index=layer.open({
+              title:'添加XXXX',
+              type:2,
+              shade:0.03,
+              shadeClose:false,
+              area:['80%','500px'],
+              move:false,
+              time:0,
+              content:'加载页面的地址' //若不显示滚动条，['地址','no']
+	});
+	layer.full(index);
+	    				</xmp>
+	    			</div>
+	    		</div>
+
+	    		<!-- 表单提交 -->
+	    		<div class="submitBody">
+	    			<span class="pc-title-second">四、表单提交</span>
+	    			<div class="submitContent">
+	    				
+	    			</div>
+	    		</div>
+    		</div>
+    	</div>
+    </body>
+</html>
+<script type="text/javascript" src="../../Content/js/plugIn/jquery.js"></script>
+<script type="text/javascript" src="../../Content/js/portCars.js"></script>
+<script type="text/javascript">
+	function layer1(){
+		layer.alert('提示的语句！',{
+              title:'提示',
+              shade:0.03,
+              move:false,
+              time:0,
+              skin:'layui-layer-lan',
+              closeBtn:0
+			});
+	}
+	function layer2(){
+		layer.confirm('删除后不可恢复，您确定吗？',{
+              title:'提示',
+              shade:0.03,
+              move:false,
+              time:0,
+              skin:'layui-layer-lan',
+              closeBtn:0,
+              btn:['确定','取消'],
+              yes:function(index){
+                layer.close(index);
+             }
+	    });
+	}
+
+	function layer3(){
+		layer.alert('保存成功！',{
+              title:'提示',
+              shade:0.03,
+              move:false,
+              time:0,
+              skin:'layui-layer-lan',
+              closeBtn:0,
+             },function(index){
+               layer.close(index);
+               window.location.href='button.html';
+	    });
+	}
+
+	function layer4(){
+		layer.open({
+			title:'添加XXXX',
+			type:2,
+			shade:0.03,
+			shadeClose:false,
+			area:['80%',"500px"],
+			move:false,
+			content:'button.html'
+		});
+	}
+	function layer5(){
+		var index=layer.open({
+			title:'添加XXXX',
+			type:2,
+			shade:0.03,
+			shadeClose:false,
+			area:['80%',"500px"],
+			move:false,
+			content:'button.html'
+		});
+		layer.full(index);
+	}
+</script>

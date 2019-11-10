@@ -1,0 +1,348 @@
+body{
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      font-size: 14px;
+      background: #f7f7f7;
+      min-height: 850px;
+      font-family:"微软雅黑";
+}
+*{
+      padding: 0;
+      margin: 0;
+}
+
+#backDiv{
+	width: 100%;
+	min-height: 770px;
+}
+#backTop{
+	width: 100%;
+}
+#back{
+	width: 840px;
+	height: 630px;
+	-webkit-box-shadow: 0 6px 20px 5px rgba(40, 120, 255, 0.1), 0 16px 24px 2px rgba(0, 0, 0, 0.05); 
+    -moz-box-shadow: 0 6px 20px 5px rgba(40, 120, 255, 0.1), 0 16px 24px 2px rgba(0, 0, 0, 0.05); 
+    box-shadow: 0 6px 20px 5px rgba(40, 120, 255, 0.1), 0 16px 24px 2px rgba(0, 0, 0, 0.05);
+    background: #fff;
+    margin: 0 auto;
+}
+
+#left,#right{
+	float: left;
+	background: #fff;
+}
+#left{
+	width: 339px;
+	height: 100%;
+	text-align: center;
+}
+.fontCenter{
+	margin-top: 171px;
+	height:48px;
+	line-height: 20px;
+	font-size: 14px;
+	color: #0e0000;
+	letter-spacing: 5px;
+}
+.radioSpan{
+	display: inline-block;
+	width: 5px;
+	height: 5px;
+	background: #003CC8;
+	border-radius: 100%;
+	margin-right: 8px;
+	position: relative;
+	top: -2px;
+}
+
+#right{
+	width: 500px;
+	height: 100%;
+}
+#right a{
+	color:#6d6d6d;
+	text-decoration: none;
+}
+#right a:hover{
+	color:#003cc8;
+}
+.loginFont{
+	width: 34px;
+	padding-bottom: 2px;
+	text-align: center;
+	margin: 70px 0 48px 0;
+	color: #003cc8;
+	font-size: 16px;
+	border-bottom: 2px solid #003CC8;
+}
+.loginBtn:hover{
+	color: #003b8c;
+}
+.logoImg{
+	 width: 220px;
+	 height: 65px;
+	 margin:0 auto;
+	 margin-top: 86px;
+}
+.logoImg img{
+    width:220px;
+    height:65px;
+}
+.slogan{
+	 font-size: 14px;
+	 letter-spacing: 10px;
+	 color: #003cc8;
+	 margin-top: 200px;
+}
+.centerLine{
+	 float: left; 
+	 background: #d8d8d8;
+	 width: 1px;
+	 height:550px;
+	 margin-top:40px;
+}
+.inputTipPassword{
+	margin-top: 15px;
+}
+.checkAndFindpass{
+	 margin-top: 30px;
+}
+.checkboxImg{
+	 display: inline-block;
+	 width:15px;
+	 height: 15px;
+	 position: relative;
+	 top: 2.5px;
+	 margin-right: 3px;
+}
+.rememberPassword{
+	color: #6d6d6d;
+}
+.findPassword{
+	color: #6d6d6d;
+	float: right;
+	margin-right: 68px;
+}
+.companyName{
+	padding-top: 20px;
+}
+.loginBtn{
+	text-align: center;
+}
+#right .loginBtn a{
+	display: inline-block;
+	margin:0 auto;
+	width: 146px;
+	height: 40px;
+	border: 2px solid #6d6d6d;
+	border-radius: 6px;
+	text-align: center;
+	line-height: 40px;
+	color: #6d6d6d;
+	font-size: 16px;
+	margin-top: 85px;
+
+}
+#right .loginBtn a:hover{
+	color:#003CC8;
+    border: 2px solid #003cc8;
+}
+.noteInfo{
+	margin: auto;
+	margin-top: 22px;
+	height: 12px;
+	line-height: 12px;
+	font-size: 12px;
+	color: #999;
+	display: table;
+}
+
+
+.bottomOpera{
+	width: 100%;
+	height: 80px;
+	background: #333333;
+	color: #FFF;
+	font-size: 12px;
+	text-align: center;
+	line-height: 20px;
+	position: absolute;
+}
+
+
+
+.verific{
+	  width: 145px;
+    height: 24px;
+    float: right;
+    position: relative;
+    top: -32px;
+    left: -68px;
+    font-size: 16px;
+    text-align: center;
+    color: gray;
+    line-height: 23px;
+    border-left: 1px solid gray;
+    z-index: 11;
+}
+
+.nowLogin{
+	color: #003CC8;
+	font-size: 15px;
+	margin: 0 auto;
+	margin-top: 74px;
+	display: table;
+}
+
+.mar_left{
+	margin-left: 64px;
+}
+.checkboxImgBox{
+	position: absolute;
+	display: inline-block;
+	width:100%;
+	height:100%;
+	z-index:1;
+}
+.checkboxImg input{
+	position: relative;
+	opacity: 0;
+	z-index: 1000;
+}
+/*微信图标*/
+.wechatCode{
+    width: 180px;
+    height: 181px;
+    margin: auto;
+    margin-top: -12px;
+    margin-left: 103px;
+}
+.userLogin{
+	font-size: 14px;
+	color: gray;
+	text-align: center;
+	margin-top: 75px;
+}
+.spanLine{
+	display: inline-block;
+    height: 1px;
+    width: 135px;
+    background: gray;
+    position: relative;
+    top: -4px;
+}
+.wechat_icon{
+	width: 36px;
+	height: 36px;
+	margin: auto;
+	margin-top: 30px;
+	cursor: pointer;
+}
+.wechat_icon img{
+    width:100%;
+    height:100%;
+}
+
+记住输入数据时，消除黄色背景
+input:-webkit-autofill {
+	-webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+	
+
+input{
+	outline: none;
+	border: none;
+}
+
+
+/* 当前点错的  */
+.inputError{
+	border-bottom: 1px solid #FF0000;
+}
+.inputsucc{
+	border-bottom: 1px solid #003CC8;
+}
+
+.inputText{
+	width: 368px;
+	background: none;
+	border-bottom: 1px solid #d8d8d8;
+	font-size: 16px;
+	font-family: "微软雅黑";
+	padding-bottom: 5px;
+	position: relative;
+	z-index: 10;
+	
+}
+
+.inputTips{
+	font-size: 16px;
+	margin-bottom: 12px;
+	color: #6d6d6d;
+	position: relative;
+	top: 37px;
+	height: 27px;
+}
+.inputTips1{
+	font-size: 12px;
+	color: #FF0000;
+	float: right;
+	margin-right: 68px;
+	margin-top: 5px;
+	display: none;
+}
+
+.inputCheckBox{
+	width: 16px;
+	height: 16px;
+	position: relative;
+	top: 3px;
+	margin-right: 3px;
+	border: 1px solid #003CC8;
+}
+
+.cursorPointer{
+	cursor: pointer;
+}
+
+ 
+.layerTip{
+	border-radius: 3px;
+	background: #3F3F3F;
+	color: white;
+	font-size: 13px;
+	text-align: center;
+	padding: 10px 20px;
+	max-width: 260px;
+	margin: 0 auto;
+	position: relative;
+	top:-166px;
+	display: none;
+}
+	
+/*输入三次错误，进行提示的弹出框演示*/
+ .passwordThree dl dd{
+            margin:20px 20px 10px 20px;
+            text-align:center;
+        }
+        .passwordThree dl dd a{ 
+            padding:0 20px;
+            margin-left:8px;
+            display:inline-block;
+            height:30px;
+            line-height:30px;
+            text-decoration:none;
+        }
+        .passwordThree dl dd .loginGo{
+            color:#fff;
+            background:#1e9fff;
+        }
+         .passwordThree dl dd .loginEnd{
+             color:#333;
+             border:1px solid #dedede;
+         }	
+
+
+

@@ -1,0 +1,542 @@
+@charset 'Utf-8';
+*{
+	padding: 0px;
+	margin:0px;
+}
+span,a{
+	display: inline-block;
+}
+.form{
+	background: #fff;
+	height: auto;
+	width:auto;
+	margin: 0 20px 20px 20px;
+	padding: 20px;
+}
+.pc-form{
+	width:auto;
+	height:auto;
+	background: #fff;
+	margin:0 20px 20px 20px;
+	padding:20px;
+}
+.pc-title-first{
+	font-size:16px;
+	font-weight: 600;
+	color: #000;
+	height: 40px;
+}
+.pc-title-first:before{
+	content:'|';
+	width:2px;
+	height:20px;
+	background: #1858c8;
+	color:#1858c8;
+	margin-right:8px;
+}
+.pc-title-second{
+	font-size: 14px;
+    font-weight: 600;
+    color: #000;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+/*标题*/
+.headerText-one{
+	font-size:16px;
+    font-weight:600;
+    color:#000;
+    margin-bottom: 30px;
+}
+.headerText-one:before{
+    content:"|";
+	width:2px;
+	height:20px;
+	background:#1858c8;
+	color:#1858c8;
+	margin-right:8px;
+}
+.headerText-two{
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+/*按钮*/
+.pc-btn{
+	height:32px;
+	padding: 0 25px;
+	margin: 8px 7px 8px 0; 
+	border: 1px solid #D5D8DC;
+	cursor: pointer;
+	background: #fff;
+	color: #000;
+	font-size: 14px;
+}
+.pc-btn-sm{
+	height:32px;
+	padding: 0 10px;
+	margin: 8px 7px 8px 0; 
+	border: 1px solid #D5D8DC;
+	cursor: pointer;
+	background: #fff;
+	color: #000;
+	font-size: 14px;
+}
+.pc-btn-mini{
+	height:25px;
+	padding: 0 8px;
+/*	margin: 8px 7px 8px 0; */
+	border: 1px solid #D5D8DC;
+	cursor: pointer;
+	background: #fff;
+	color: #000;
+	font-size: 14px;
+}
+.radius{
+	border-radius: 4px;
+}
+.pc-btn-primary{
+	background: #1858c8;
+	border:1px solid #1858c8;
+	color: #fff;
+}
+.pc-btn-secondary{
+	background: #EDF0F4;
+	border:1px solid #EDF0F4;
+	color: #000;
+}
+.pc-btn-primary-disabled{
+    background: #8CACE4;
+    border:1px solid #8CACE4;
+    color: #fff;
+    cursor: not-allowed;
+}
+.pc-btn-secondary-disabled{
+	background: #EDF0F4;
+	border: 1px solid #EDF0F4;
+	color:#000;
+	cursor: not-allowed;
+}
+/*链接*/
+.pc-link{
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+	padding: 0 4px;
+}
+.pc-link-blue{
+	color: #1858c8;
+	text-decoration: none;
+	cursor: pointer;
+	padding: 0 4px;
+}
+
+/*表单*/
+input[type='text'],select{
+	height: 25px;
+	line-height: 25px;
+	border:1px solid #C3CCD9;
+	font-size: 14px;
+	width:92%;
+	outline: none;
+	box-sizing: border-box;
+	text-indent: 5px;
+}
+input[type='text']:focus,.pc-textarea:focus,select:focus{
+   border:1px solid #1858c8;
+}
+.pc-text-noBorder{
+	border:none !important;
+	background:#EBF0FA;
+}
+.pc-text-readonly{
+	border:none !important;
+	background:#EBF0FA;
+}
+.pc-text-disabled{
+	border:none !important;
+	background:#EBF0FA;
+	cursor: not-allowed;
+}
+.pc-textarea{
+	height: 90px;
+	width:92%;
+	outline: none;
+	box-sizing: border-box;
+	text-indent: 5px;
+	border:1px solid #C3CCD9;
+	padding: 5px 0;
+	
+}
+.pc-textarea-resize{
+	resize:none;
+}
+.pc-textarea-scroll{
+	overflow-y:scroll;
+}
+
+/*当为空或则填写不正确时，边框变红*/
+.pc-red{
+	border:1px solid #f00 !important;
+}
+
+/*下拉列表*/
+/*select{
+	border:1px solid #C3CCD9;
+	height: 25px;
+	line-height: 25px;
+	width: 92%;
+	outline: none;
+}*/
+.white{
+	background: #fff;
+}
+.blue{
+	color:#1858c8;
+	font-weight: 600;
+}
+.pc-select{
+	/*清除select默认样式*/
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    -ms-appearance:none;
+    font-size: 14px;
+    /*自定义箭头的样式，记得背景一定要加 白色或其他*/
+    background:url("../img/展开.png") no-repeat scroll 98% center;
+     /*ie下,原默认的箭头样式还是会显示，所以这里把自定义的样式给去除了*/
+    background:#fff\9;
+    padding:0 26px 0 8px;
+    outline:none;
+}
+ .selectUp{
+      background:url("../img/收起.png") no-repeat scroll 98% center !important;
+}
+
+.pc-select-background{
+	/*清除select默认样式*/
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    -ms-appearance:none;
+    border:none !important;
+    color:#0542C0;
+    font-size: 14px;
+    /*自定义箭头的样式，记得背景一定要加 白色或其他*/
+    background:url("../img/selectDown.png") no-repeat scroll 98% center #EBF0FA;
+     /*ie下,原默认的箭头样式还是会显示，所以这里把自定义的样式给去除了*/
+    background:#fff\9;
+    padding:0 26px 0 8px;
+    outline:none;
+}
+.selectUp-background{
+      background:url("../img/selectUp.png") no-repeat scroll 98% center #EBF0FA !important;
+}
+input.es-input:focus{
+	-webkit-border-bottom-left-radius:0;
+	-moz-border-radius-bottomleft:0;
+	border-bottom-left-radius:0;
+	-webkit-border-bottom-right-radius:0;
+	-moz-border-radius-bottomright:0;
+	border-bottom-right-radius:0
+}
+.es-list{
+	display:block;
+	position:absolute;
+	padding:0;
+	margin:0;
+	border:1px solid #c3ccd9;
+	display:none;
+	z-index:1000;
+	background:#fff;
+	max-height:260px;
+	overflow-y:auto;
+	-moz-box-shadow:0 2px 3px #ccc;
+	-webkit-box-shadow:0 2px 3px #ccc;
+	box-shadow:0 2px 3px #ccc;
+}
+.es-list li{
+    width:100%;
+    height:auto;
+	display:inline-block;
+	padding:5px 10px;
+	margin:0
+}
+.es-list li:hover{
+	background:#1858c8;
+	color:#fff;
+}
+
+/*单选框和多选框*/
+input[type='radio'],input[type='checkbox']{
+	margin-left:10px;
+}
+
+/*日历*/
+.pc-date-start,.pc-date-end{
+	width:40% !important;
+}
+
+
+/*form表单的排列样式*/
+.pc-table-form{
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 14px;
+    table-layout:fixed;
+    color:#000;
+    margin-bottom: 20px;
+}
+.pc-table-form tr {
+    width: 100%;
+    text-align: left;
+}
+.pc-table-form th {
+    height: 32px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    background: #fff !important;
+    border: none !important;
+    padding: 0 0;
+}
+.pc-table-form td {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    box-sizing: border-box;
+    border: 1px solid #E2E6EB;
+    height: 32px;
+    text-align: left;
+    padding:0 10px;
+}
+.pc-table-form tbody td:nth-child(2n+1){
+    background: #F4F5F7;
+}
+.pc-form-title{
+	width: 100%;
+	height: 32px;
+	font-weight: 600;
+	line-height: 32px;
+}
+
+/*页面表单宽度3、7分，即名字3，内容7，共四列*/
+.pc-form-col437 thead th:nth-child(2n+1){
+	width:15%;
+}
+.pc-form-col437 thead th:nth-child(2n){
+	width:35%;
+}
+
+/*页面表单宽度2、3分，即名字2，内容3，共四列*/
+.pc-form-col437 thead th:nth-child(2n+1){
+	width:20%;
+}
+.pc-form-col437 thead th:nth-child(2n){
+	width:30%;
+}
+
+/*页面表单宽度2、3分，即名字2，内容3，共六列*/
+.pc-form-col6 thead th:nth-child(2n+1){
+	width:11%;
+}
+.pc-form-col6 thead th:nth-child(2n){
+	width:22.3%;
+}
+
+
+/*表格*/
+/*表格容器*/
+.pc-table-content{
+	overflow-x: auto;
+}
+/*表格单的单元格等宽*/
+.pc-table{
+	border: 1px solid #E2E6EB;
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 14px;
+    table-layout:fixed;
+    color:#000;
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+.pc-table tr {
+    width: 100%;
+}
+.pc-table th {
+	white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    box-sizing: border-box;
+    border: 1px solid #E2E6EB;
+    font-weight: normal;
+    background:#F4F5F7;
+    color: #000;
+    border-color: #E2E6EB;
+    height: 32px;
+    padding:0 10px;
+  
+}
+.pc-table td {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    box-sizing: border-box;
+    border: 1px solid #E2E6EB;
+    height: 32px;
+    padding:0 10px;
+}
+.pc-table-left th,.pc-table-left td{
+    text-align: left;
+}
+.pc-table-center th,.pc-table-center td{
+	text-align: center;
+}
+.pc-table-right th,.pc-table-right td{
+	text-align: right;
+}
+.pc-table-td-right td{
+	text-align: right;
+}
+/*表格单元格宽度按内容适应*/
+.pc-table-auto{
+	table-layout:auto !important;
+}
+/*表格内的多选框*/
+.pc-table-checkbox,.pc-table-checkboxAll{
+	width:16px;
+	height:16px;
+}
+.pc-table-tr-mulChecked thead tr th:nth-child(1),.pc-table-tr-oneChecked thead tr th:nth-child(1),.pc-table-tr-operateChecked thead tr th:nth-child(1),.pc-table-all thead tr th:nth-child(1){
+    width:50px;
+}
+.pc-table-tr-operateChecked thead tr th:last-child{
+	width:120px;
+}
+.pc-table-tr-mulChecked tbody tr:hover,.pc-table-tr-oneChecked tbody tr:hover,.pc-table-tr-operateChecked tbody tr:hover,.pc-table-all tbody tr:hover{
+   background: #ebf0fa;
+   cursor:pointer;
+}
+.pc-table-tr-checkedBackground{
+	background: #ebf0fa;
+}
+.pc-table-operateBtn{
+	display: none;
+}
+
+/*选项卡*/
+.pc-tab{
+	width:100%;
+}
+.pc-tab-nav,.pc-tab-simNav{
+	width:100%;
+	border-bottom:1px solid #e1e5ec;
+	list-style: none;
+	float: left; /*清除子元素li的左悬浮*/
+	margin-bottom:10px;
+}
+.pc-tab-nav > li{
+	float: left;
+	margin-bottom: -1px;
+}
+.pc-tab-nav > li > a,.pc-tab-simNav > li > a,.pc-tab-cardNav > li > a{
+	color:#000;
+	display: inline-block;
+	padding:10px 30px;
+	text-decoration: none;
+}
+.pc-tab-nav > li > a:hover,.pc-tab-simNav > li > a:hover,.pc-tab-carNav > li > a:hover{
+	color:#1858c8;
+	font-weight: 400;
+}
+.pc-tab-nav .pc-tab-navActive > a{
+	color:#1858c8;
+	border-left:1px solid #e1e5ec;
+	border-right:1px solid #e1e5ec;
+	border-top:3px solid #1858c8;
+	font-weight: 400; 
+	background: #fff;
+}
+/*简洁选项卡*/
+.pc-tab-simNav > li{
+	float: left;
+}
+.pc-tab-simNav .pc-tab-navActive > a{
+	color:#1858c8;
+	border-bottom:3px solid #1858c8;
+	font-weight: 400;
+	background: #fff;
+}
+/*卡片选项卡*/
+.pc-tab-card{
+	width:100%;
+	border:1px solid #e1e5ec;
+}
+.pc-tab-cardNav{
+	background: #e1e5ec;
+	width:100%;
+	list-style: none;
+	float: left; /*清除子元素li的左悬浮*/
+	margin-bottom:10px;
+}
+.pc-tab-cardNav > li{
+	float: left;
+}
+.pc-tab-cardNav .pc-tab-navActive > a{
+	color:#1858c8;
+	font-weight: 400;
+	background: #fff;
+}
+/*控制选项卡内容的显示与隐藏*/
+.pc-tab .pc-tab-panel,.pc-tab-card .pc-tab-panel{
+	display: none;
+}
+.pc-tab .pc-tab-panelActive,.pc-tab-card .pc-tab-panelActive{
+	display: block;
+}
+
+/*搜索*/
+.pc-search-date select,.pc-search-input select,.pc-search-inputSelectCondition{
+	width:126px !important;
+}
+.pc-search-date input{
+	width:100px !important;
+}
+.pc-search-input input,.pc-search-inputSelect input,.pc-search-select{
+	width:190px !important;
+}
+.pc-search-date button,.pc-search-input button{
+	position: relative;
+	top:1px;
+}
+.pc-search-select{
+	display: none;
+}
+.pc-search > div,.pc-search1 > div{
+	float: left;
+	margin-right:6px;
+}
+
+/*滚轮，只对谷歌浏览器有效*/
+/*设置横向滚动条的高度，纵向滚动条的宽度*/
+*::-webkit-scrollbar{
+	width:6px;
+	height:8px;
+}
+/*横向滚动条*/
+*::-webkit-scrollbar-thumb:horizontal{
+    /*滚动条圆弧度*/
+    border-radius:6px;
+    /*滚动条背景颜色*/
+    background-color:#e1e5ec;
+}
+/*纵向滚动条*/
+*::-webkit-scrollbar-thumb:vertical{
+    /*滚动条圆弧度*/
+	border-radius:6px;
+    /*滚动条背景颜色*/
+	background-color:#e1e5ec;
+}

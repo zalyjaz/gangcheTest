@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>登录(找回密码)</title>
+		
+		<script src="../../Content/js/plugIn/jquery.js"></script>
+		<link rel="stylesheet" type="text/css" href="../../Content/css/login/loginHome.css">
+	</head>
+	<body>
+			
+		<div id="right">
+			<div class="loginFont mar_left" style="width: 68px">找回密码</div>
+			
+			<div class="mar_left inputTips inputTipAccount">请输入手机号码</div>
+			<div><input type="text" name="account" class="inputText mar_left account" /></div>
+			<div class="inputTips1 noNull1">输入不能为空</div>
+			<div class="inputTips1 inputError1">手机号码错误，请重试</div>
+
+			<div class="mar_left inputTips inputTipPassword">请输入验证码</div>
+			<div>
+				<input type="text" name="password" class="inputText mar_left password"/>
+				<div class="verific cursorPointer">获取验证码</div>
+			</div>
+			<div class="inputTips1 noNull2" style="position: relative;left: 146px;">输入不能为空</div>
+			<div class="inputTips1 inputError2" style="position: relative;left: 146px;">验证码错误，请重新输入</div>
+			
+			<div class="mar_left checkAndFindpass">
+				
+			</div>
+			<div class="loginBtn cursorPointer"><a target="iframeLoginBox" onclick="Next(this)">下一步</a></div>
+			<div class="nowLogin cursorPointer"><a href="login1.html" target="iframeLoginBox">立即登录</a></div>
+			
+			<div class="layerTip"></div>
+		</div>
+			
+	    <script src="../../Content/js/plugIn/layer/layer.js"></script>
+		<script src="../../Content/js/login.js"></script>
+		<script>
+			
+			 $(function () {
+		        noteVerify();
+		    })
+
+		    function Next(res) {
+		        checkNull();
+		        var account = $(".account").val();
+		        var password = $(".password").val();
+		        if (account !== ""&&password !== "") {
+		            $(res).attr("href", "login_resetPass.html");
+		        }
+		    }
+		</script>
+	</body>
+</html>

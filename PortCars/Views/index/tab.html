@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>选项卡</title>
+		<link rel="stylesheet" type="text/css" href="../../Content/css/index.css">
+		<link rel="stylesheet" type="text/css" href="../../Content/css/main.css">
+	</head>
+	<body style="overflow-y: auto !important;">
+	  <div class="tabContainer form">
+	  	<div class="tab-body">
+	  		<div class="headerTitle">
+	  			<span class="headerText-one">选项卡</span>
+	  		</div>
+
+	  		<!-- 包裹选项卡 -->
+	  		<div class="tab-content">
+	  			<span class="headerText-two">一、包裹选项卡</span>
+	  			<div class="pc-tab">
+				  	<ul class="pc-tab-nav">
+				  		<li class="pc-tab-navActive">
+				  			<a href="javascript:tabA" class="">选项卡一</a>
+				  		</li>
+				  		<li>
+				  			<a href="javascript:tabB">选项卡二</a>
+				  		</li>
+				  		<li>
+				  			<a href="javascript:tabC">选项卡三</a>
+				  		</li>
+				  	</ul>
+				  	<div class="pc-tab-box">
+				  		<div id="tabA" class="pc-tab-panel pc-tab-panelActive">
+				  			12
+				  		</div>
+				  		<div id="tabB" class="pc-tab-panel">
+				  			34
+				  		</div>
+				  		<div id="tabC" class="pc-tab-panel">
+				  			56
+				  		</div>
+				  	</div>
+			  	</div>
+		  	
+			  	<div class="tab-info" >
+			  		<div class="headerTitle">
+			  			<span class="headerText-two">代码<span class="annotation">(javascript:代替#，为了防止点击a标签时，页面向上移动）<span></span>
+			  		</div>
+			  		<div class="tab-code">
+				  		<xmp>
+							<div class="pc-tab">
+							  	<ul class="pc-tab-nav">
+							  		<li class="pc-tab-navActive">
+							  			<a href="javascript:tabA" class="">选项卡一</a>
+							  		</li>
+							  		<li>
+							  			<a href="javascript:tabB">选项卡二</a>
+							  		</li>
+							  		<li>
+							  			<a href="javascript:tabC">选项卡三</a>
+							  		</li>
+							  	</ul>
+							  	<div class="pc-tab-box">
+							  		<div id="tabA" class="pc-tab-panel pc-tab-panelActive">
+							  			12
+							  		</div>
+							  		<div id="tabB" class="pc-tab-panel">
+							  			34
+							  		</div>
+							  		<div id="tabC" class="pc-tab-panel">
+							  			56
+							  		</div>
+							  	</div>
+						  	</div>
+				  		</xmp>
+				  		
+			  		</div>
+			  	</div>
+	  	    </div>
+
+            <!-- 简洁选项卡 -->
+	  	    <div class="tab-content">
+	  			<span class="headerText-two">二、简洁选项卡</span>
+	  			<div class="pc-tab">
+				  	<ul class="pc-tab-simNav">
+				  		<li class="pc-tab-navActive">
+				  			<a href="javascript:tabA" class="">选项卡一</a>
+				  		</li>
+				  		<li>
+				  			<a href="javascript:tabB">选项卡二</a>
+				  		</li>
+				  		<li>
+				  			<a href="javascript:tabC">选项卡三</a>
+				  		</li>
+				  	</ul>
+				  	<div class="pc-tab-Box">
+				  		<div id="tabA" class="pc-tab-panel pc-tab-panelActive">
+				  			简洁12
+				  		</div>
+				  		<div id="tabB" class="pc-tab-panel">
+				  			简洁34
+				  		</div>
+				  		<div id="tabC" class="pc-tab-panel">
+				  			简洁56
+				  		</div>
+				  	</div>
+			  	</div>
+		  	
+			  	<div class="tab-info" >
+			  		<div class="headerTitle">
+			  			<span class="headerText-two">代码</span>
+			  		</div>
+			  		<div class="tab-code">
+				  		<xmp>
+							<div class="pc-tab">
+							  	<ul class="pc-tab-simNav">
+							  		<li class="pc-tab-navActive">
+							  			<a href="javascript:tabA" class="">选项卡一</a>
+							  		</li>
+							  		<li>
+							  			<a href="javascript:tabB">选项卡二</a>
+							  		</li>
+							  		<li>
+							  			<a href="javascript:tabC">选项卡三</a>
+							  		</li>
+							  	</ul>
+							  	<div class="pc-tab-Box">
+							  		<div id="tabA" class="pc-tab-panel pc-tab-panelActive">
+							  			简洁12
+							  		</div>
+							  		<div id="tabB" class="pc-tab-panel">
+							  			简洁34
+							  		</div>
+							  		<div id="tabC" class="pc-tab-panel">
+							  			简洁56
+							  		</div>
+							  	</div>
+						  	</div>
+				  		</xmp>
+				  		
+			  		</div>
+			  	</div>
+	  	    </div>
+
+	  	    <!-- 卡片选项卡 -->
+	  		<div class="tab-content">
+	  			<span class="headerText-two">三、卡片选项卡</span>
+	  			<div class="pc-tab-card">
+				  	<ul class="pc-tab-cardNav">
+				  		<li class="pc-tab-navActive">
+				  			<a href="javascript:tabA" class="">选项卡一</a>
+				  		</li>
+				  		<li>
+				  			<a href="javascript:tabB">选项卡二</a>
+				  		</li>
+				  		<li>
+				  			<a href="javascript:tabC">选项卡三</a>
+				  		</li>
+				  	</ul>
+				  	<div class="pc-tab-box">
+				  		<div id="tabA" class="pc-tab-panel pc-tab-panelActive">
+				  			卡片12
+				  		</div>
+				  		<div id="tabB" class="pc-tab-panel">
+				  			卡片34
+				  		</div>
+				  		<div id="tabC" class="pc-tab-panel">
+				  			卡片56
+				  		</div>
+				  	</div>
+			  	</div>
+		  	
+			  	<div class="tab-info" >
+			  		<div class="headerTitle">
+			  			<span class="headerText-two">代码</span>
+			  		</div>
+			  		<div class="tab-code">
+				  		<xmp>
+							<div class="pc-tab-card">
+							  	<ul class="pc-tab-cardNav">
+							  		<li class="pc-tab-navActive">
+							  			<a href="javascript:tabA" class="">选项卡一</a>
+							  		</li>
+							  		<li>
+							  			<a href="javascript:tabB">选项卡二</a>
+							  		</li>
+							  		<li>
+							  			<a href="javascript:tabC">选项卡三</a>
+							  		</li>
+							  	</ul>
+							  	<div class="pc-tab-box">
+							  		<div id="tabA" class="pc-tab-panel pc-tab-panelActive">
+							  			卡片12
+							  		</div>
+							  		<div id="tabB" class="pc-tab-panel">
+							  			卡片34
+							  		</div>
+							  		<div id="tabC" class="pc-tab-panel">
+							  			卡片56
+							  		</div>
+							  	</div>
+						  	</div>
+				  		</xmp>
+			  		</div>
+			  	</div>
+	  	    </div>
+
+	  	</div>
+	  </div>
+	</body>
+</html>
+<script type="text/javascript" src="../../Content/js/plugIn/jquery.js"></script>
+<script type="text/javascript" src="../../Content/js/main.js"></script>

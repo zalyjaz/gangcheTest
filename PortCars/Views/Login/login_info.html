@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>登录(短信验证码)</title>
+		
+		<script src="../../Content/js/plugIn/jquery.js"></script>
+		<link rel="stylesheet" type="text/css" href="../../Content/css/login/loginHome.css">
+	</head>
+	<body>
+		
+		
+		<div id="right">
+			<div class="loginFont mar_left">登录</div>
+			
+			<div class="mar_left inputTips inputTipAccount">手机号</div>
+			<div><input type="text" name="account" class="inputText mar_left account"  /></div>
+			<div class="inputTips1 noNull1">输入不能为空</div>
+			<div class="inputTips1 inputError1">用户名/手机号格式错误，请重试</div>
+			
+			<div class="mar_left inputTips inputTipPassword" style="margin-top: 15px;">请输入验证码</div>
+			<div>
+				<input type="text" name="password" class="inputText mar_left password"/>
+				<div class="verific cursorPointer">获取验证码</div>
+			</div>
+			<div class="inputTips1 noNull2"  style="position: relative;left: 146px;">输入不能为空</div>
+			<div class="inputTips1 inputError2" style="position: relative;left: 146px;">验证码错误，请重新输入</div>
+			
+			<div class="mar_left checkAndFindpass">
+				
+			</div>
+			<div class="loginBtn cursorPointer"><a href="#" onclick="Login()">登录</a></div>
+			<div class="noteInfo cursorPointer"><a href="login1.html" target="iframeLoginBox">账号密码登录</a></div>
+			
+			<div class="layerTip"></div>
+			<div class="wechat_icon"><a href="login_wechat.html" target="iframeLoginBox"><img src="../../Content/img/login/wechat_gray.png" /></a></div>
+
+	        <div>
+	            <span class="spanLine mar_left" style="margin-right: 12px;"></span>
+	            <span style="display:inline-block; color: #6D6D6D;text-align: center;margin-top: 5px;">第三方登录</span>
+	            <span class="spanLine" style="margin-left: 12px;"></span>
+	        </div>
+		</div>
+			
+	
+		<script src="../../Content/js/plugIn/layer/layer.js"></script>
+		<script src="../../Content/js/login.js"></script>	
+		<script>
+		 $(function () {
+		        noteVerify();
+		    });
+
+		    function Login() {
+		        checkNull();
+		    }
+
+		</script>
+	</body>
+</html>

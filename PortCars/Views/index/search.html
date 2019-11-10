@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>搜索</title>
+		<link rel="stylesheet" type="text/css" href="../../Content/css/main.css">
+		<link rel="stylesheet" href="../../Content/css/plugIn/pikaday.css">
+		<link rel="stylesheet" href="../../Content/js/plugIn/layer/theme/default/layer.css">
+		<style>
+			.searchCode{
+				border:1px solid #e1e3ec;
+			}
+		</style>
+    </head>
+	<body style="overflow-y: auto !important;">
+         <div class="searchContainer pc-form">
+         	<span class="pc-title-first">
+         		搜索
+         	</span>
+
+         	<!-- 时间段的搜索 -->
+         	<div class="searchBody">
+         		<span class="pc-title-second">一、按时间段搜索</span>
+         		<div class="pc-search-date">
+         			<select class="pc-search-dateCondition pc-select-background">
+         				<option value="">--请选择--</option>
+         				<option value="上班日期">上班日期</option>
+         				<option value="申请日期">申请日期</option>
+         			</select>
+         			<input type="text" class="pc-date pc-date-start">
+         			<input type="text" class="pc-date pc-date-end">
+         			<button type="button" class="pc-btn-mini pc-btn-primary" onclick="searchDateBtn()">查询</button>
+         		</div>
+
+				<span class="pc-title-second">代码</span>
+         		<div class="searchCode">
+	         		<xmp>
+	         			<div class="pc-search-date">
+		         			<select class="pc-search-dateCondition pc-select-background">
+		         				<option value="">--请选择--</option>
+		         				<option value="上班日期">上班日期</option>
+		         				<option value="申请日期">申请日期</option>
+		         			</select>
+		         			<input type="text" class="pc-date pc-date-start">
+		         			<input type="text" class="pc-date pc-date-end">
+		         			<button type="button" class="pc-btn-mini pc-btn-primary" onclick="searchDateBtn()">查询</button>
+		         		</div>
+	         		</xmp>
+	         	</div>
+         	</div>
+
+
+            <!-- 条件和输入框 -->
+         	<div class="searchBody">
+         		<span class="pc-title-second">按条件和输入框搜索</span>
+         		<div class="pc-search-input">
+         			<select class="pc-search-inputCondition pc-select-background">
+         				<option value="">--请选择--</option>
+         				<option value="编号">编号</option>
+         				<option value="姓名">姓名</option>
+         			</select>
+         			<input type="text" class="pc-search-text" placeholder="请输入查询关键字">
+         			<button type="button" class="pc-btn-mini pc-btn-primary" onclick="searchInputBtn()">查询</button>
+         		</div>
+
+         		<span class="pc-title-second">代码</span>
+         		<div class="searchCode">
+	         		<xmp>
+	         			<div class="pc-search-input">
+		         			<select class="pc-search-inputCondition pc-select-background">
+		         				<option value="">--请选择--</option>
+		         				<option value="编号">编号</option>
+		         				<option value="姓名">姓名</option>
+		         			</select>
+		         			<input type="text" class="pc-search-text" placeholder="请输入查询关键字">
+		         			<button type="button" class="pc-btn-mini pc-btn-primary" onclick="searchInputBtn()">查询</button>
+		         		</div>
+	         		</xmp>
+	         	</div>
+         	</div>
+
+         	<!-- 条件和输入框或下拉框 -->
+         	<div class="searchBody">
+         		<span class="pc-title-second">按条件和输入框（下拉框）搜索</span>
+         		<div class="pc-search-inputSelect">
+         			<select class="pc-search-inputSelectCondition pc-select-background">
+         				<option value="">--请选择--</option>
+         				<option value="编号">编号</option>
+         				<option value="姓名">姓名</option>
+         				<option value="性别">性别</option>
+         			</select>
+         			<input type="text" class="pc-search-itext" placeholder="请输入查询关键字">
+         			<select class="pc-search-select pc-select-background"></select>
+         			<button type="button" class="pc-btn-mini pc-btn-primary" onclick="searchInputSelectBtn()">查询</button>
+         		</div>
+
+         		<span class="pc-title-second">代码</span>
+         		<div class="searchCode">
+	         		<xmp>
+	         			<div class="pc-search-inputSelect">
+		         			<select class="pc-search-inputSelectCondition pc-select-background">
+		         				<option value="">--请选择--</option>
+		         				<option value="编号">编号</option>
+		         				<option value="姓名">姓名</option>
+		         				<option value="性别">性别</option>
+		         			</select>
+		         			<input type="text" class="pc-search-itext" placeholder="请输入查询关键字">
+		         			<select class="pc-search-select pc-select-background"></select>
+		         			<button type="button" class="pc-btn-mini pc-btn-primary" onclick="searchInputSelectBtn()">查询</button>
+		         		</div>
+	         		</xmp>
+	         	</div>
+         	</div>
+
+         	<!-- 时间段以及条件和输入框 -->
+         	<div class="searchBody">
+         		<span class="pc-title-second">按时间段与条件和输入框搜索，组合搜索</span>
+         		<div class="pc-search">
+         			<div class="pc-search-date">
+	         			<select class="pc-search-dateCondition pc-select-background">
+	         				<option value="">--请选择--</option>
+	         				<option value="上班日期">上班日期</option>
+	         				<option value="申请日期">申请日期</option>
+	         			</select>
+	         			<input type="text" class="pc-date pc-date-start">
+	         			<input type="text" class="pc-date pc-date-end">
+	         		</div>
+	         		<div class="pc-search-input">
+	         			<select class="pc-search-inputCondition pc-select-background">
+	         				<option value="">--请选择--</option>
+	         				<option value="编号">编号</option>
+	         				<option value="姓名">姓名</option>
+	         			</select>
+	         			<input type="text" class="pc-search-text" placeholder="请输入查询关键字">
+	         		</div>
+	         		<button type="button" class="pc-btn-mini pc-btn-primary" onclick="searchBtn()">查询</button>
+         		</div>
+
+         		<span class="pc-title-second">代码</span>
+         		<div class="searchCode">
+	         		<xmp>
+	         			<div class="pc-search">
+		         			<div class="pc-search-date">
+			         			<select class="pc-search-dateCondition pc-select-background">
+			         				<option value="">--请选择--</option>
+			         				<option value="上班日期">上班日期</option>
+			         				<option value="申请日期">申请日期</option>
+			         			</select>
+			         			<input type="text" class="pc-date pc-date-start">
+			         			<input type="text" class="pc-date pc-date-end">
+			         		</div>
+			         		<div class="pc-search-input">
+			         			<select class="pc-search-inputCondition pc-select-background">
+			         				<option value="">--请选择--</option>
+			         				<option value="编号">编号</option>
+			         				<option value="姓名">姓名</option>
+			         			</select>
+			         			<input type="text" class="pc-search-text" placeholder="请输入查询关键字">
+			         		</div>
+			         		<button type="button" class="pc-btn-mini pc-btn-primary" onclick="searchBtn()">查询</button>
+		         		</div>
+	         		</xmp>
+	         	</div>
+         	</div>
+
+         	<!-- 时间段以及条件和输入框或下拉框 -->
+         	<div class="searchBody">
+         		<span class="pc-title-second">按时间段与条件和输入框或下拉框搜索，组合搜索</span>
+         		<div class="pc-search1">
+         			<div class="pc-search-date">
+	         			<select class="pc-search-dateCondition pc-select-background">
+	         				<option value="">--请选择--</option>
+	         				<option value="上班日期">上班日期</option>
+	         				<option value="申请日期">申请日期</option>
+	         			</select>
+	         			<input type="text" class="pc-date pc-date-start">
+	         			<input type="text" class="pc-date pc-date-end">
+	         		</div>
+	         		<div class="pc-search-inputSelect">
+	         			<select class="pc-search-inputSelectCondition pc-select-background">
+	         				<option value="">--请选择--</option>
+	         				<option value="编号">编号</option>
+	         				<option value="姓名">姓名</option>
+	         				<option value="性别">性别</option>
+	         			</select>
+	         			<input type="text" class="pc-search-itext" placeholder="请输入查询关键字">
+	         			<select class="pc-search-select pc-select-background"></select>
+	         		</div>
+	         		<button type="button" class="pc-btn-mini pc-btn-primary" onclick="searchBtn1()">查询</button>
+         		</div>
+
+         		<span class="pc-title-second">代码</span>
+         		<div class="searchCode">
+	         		<xmp>
+	         			<div class="pc-search1">
+		         			<div class="pc-search-date">
+			         			<select class="pc-search-dateCondition pc-select-background">
+			         				<option value="">--请选择--</option>
+			         				<option value="上班日期">上班日期</option>
+			         				<option value="申请日期">申请日期</option>
+			         			</select>
+			         			<input type="text" class="pc-date pc-date-start">
+			         			<input type="text" class="pc-date pc-date-end">
+			         		</div>
+			         		<div class="pc-search-inputSelect">
+			         			<select class="pc-search-inputSelectCondition pc-select-background">
+			         				<option value="">--请选择--</option>
+			         				<option value="编号">编号</option>
+			         				<option value="姓名">姓名</option>
+			         				<option value="性别">性别</option>
+			         			</select>
+			         			<input type="text" class="pc-search-itext" placeholder="请输入查询关键字">
+			         			<select class="pc-search-select pc-select-background"></select>
+			         		</div>
+			         		<button type="button" class="pc-btn-mini pc-btn-primary" onclick="searchBtn1()">查询</button>
+		         		</div>
+	         		</xmp>
+	         	</div>
+         	</div>
+         </div>
+	</body>
+</html>
+<script type="text/javascript" src="../../Content/js/plugIn/jquery.js"></script>
+<script type="text/javascript" src="../../Content/js/portCars.js"></script>

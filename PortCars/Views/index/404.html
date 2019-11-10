@@ -1,0 +1,100 @@
+<!DOCTYPE Html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>错误页面</title>
+		<style>
+		    html{
+		    	height:100%;
+		    }
+		    body{
+		    	padding:0;
+		    	margin:0;
+			   background:#f2f2f2;
+			   background-size:100% 100%;
+		    }
+			.container{
+				text-align: center;
+				width:600px;
+				height:300px;
+				position: absolute;
+				left:50%;
+				top:50%;
+				margin-left:-250px;
+				margin-top:-150px;
+			}
+			.container > div{
+				float: left;
+				margin-right:20px;
+			}
+			.marked{
+				text-align: center;
+				font-size:22px;
+				width:368px;
+				height:48px;
+				line-height:48px;
+				background: #F23A3A;
+				color:#fff;
+			}
+			.deixis{
+				width:368px;
+				margin-top:10px;
+				color:#000;
+				line-height: 32px;
+			}
+			.deixis a{
+				color:#1858c8;
+				font-size:16px;
+			}
+			.img{
+                width:192px;
+                height:162px;
+                line-height: 162px;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="text">
+		<div class="container">
+			<div class="img">
+				<img src="../../Content/img/404.jpg" class="img404" style="width:192px;height:162px;">
+				<img src="../../Content/img/500.jpg" class="img500" style="width:192px;height:162px;">
+				<img src="../../Content/img/baocuo2.png" style="position: relative;top:30px;">
+			</div>
+			<div class="marked">哎呀！服务器开小差啦......</div>
+			<div class="deixis">
+				<span>很抱歉！没有找到您到要的内容，可能的原因有：</span><br>
+                <span>网站可能在进行维护或出现程序问题<br>
+                您可以返回<a href="#" onclick="index()">首页</a>或<a href="#" onclick="myRefresh()">刷新</a>该页面或联系<a href="#">管理员</a></span>
+			</div>
+		</div>
+	</body>
+</html>
+<script type="text/javascript" src="../../Content/js/plugIn/jquery.js"></script>
+<script>
+	$(function(){
+		$(".img404").css('display','none');
+		$(".img500").css('display','none');
+		$("input").change(function(){
+			var inputVal=$(this).val();
+			console.log(inputVal);
+			if(inputVal==404){
+				$(".img404").css('display','inline-block');
+				$(".img500").css('display','none');
+			}else if(inputVal==500){
+				$(".img404").css('display','none');
+				$(".img500").css('display','inline-block');
+			}else{
+				$(".img404").css('display','none');
+				$(".img500").css('display','none');
+			}
+		});
+		
+	});
+	function index(){
+
+	}
+	function myRefresh(){
+		window.location.reload();
+	}
+</script>

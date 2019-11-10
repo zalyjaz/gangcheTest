@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>登录</title>
+		<link rel="Shortcut Icon" href="../../Content/img/favicon.ico">
+		<link rel="stylesheet" type="text/css" href="../../Content/css/login/loginHome.css">
+	</head>
+	<body>
+		
+		<div id="backDiv">
+			<div id="backTop"></div>
+			<div id="back">
+				<!-- 左边 -->
+				<div id="left">
+					<div class="logoImg"><img src="../../Content/img/login/logo.png"/></div>
+					<div class="fontCenter">平行进口车供应链解决方案供应商</div>
+					<div class="slogan">港通天下<span class="radioSpan"></span>车行万里</div>
+				</div>
+				<!-- 中间 -->
+				<div class="centerLine"></div>
+				<!-- 右边 -->
+				<div id="right">
+					<iframe src="../../Views/Login/login1.html" name="iframeLoginBox" frameborder="0" scrolling="no" width="100%" height="100%"></iframe>
+				</div>
+			</div>
+		</div>
+		
+		<div class="bottomOpera">
+			<div>
+				 <div class="companyName">杭州港车信息技术有限公司</div>
+	            <div>
+	                <span>版权所有： &copy;2017-<i id="dateYear" style="font-style:normal;"></i> Portcars.cn</span>
+	                <span>ICP证： 浙ICP备18035344</span>
+	                <span>备案号： 浙ICP备18035344号-1</span>
+	            </div>
+			</div>
+		</div>
+	
+		<script src="../../Content/js/plugIn/jquery.js"></script>
+		<script type="text/javascript" src="../../Content/js/login.js"></script>
+		<script>
+			$(function () {
+		        var date = new Date();
+		        $("#dateYear").text(date.getFullYear());
+
+		    })
+			
+		</script>
+	</body>
+</html>

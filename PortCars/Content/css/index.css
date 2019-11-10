@@ -1,0 +1,194 @@
+@charset 'Utf-8';
+*{
+	margin:0px;
+	padding:0px;
+	font-family: "微软雅黑";
+	/*color:#000;*/
+}
+body{
+	width:100%;
+	overflow: hidden;
+}
+a{
+	text-decoration: none;
+}
+ul li{
+	list-style: none;
+	cursor: pointer;
+}
+.container{
+	width:100%;
+}
+/*顶部*/
+.header{
+	height:54px;
+	width:100%;
+	min-width: 1366px;
+	background: #1858c8;
+}
+.header > div{
+	float: left;
+}
+.logo span{
+	display: inline-block;
+	font-size:24px;
+	color:#fff;
+	width:220px;
+	height: 54px;
+	line-height: 54px;
+	text-align: center;
+	font-weight: 600;
+	/*letter-spacing:2px;*/
+	font-family: 'Tangerine'
+}
+.headerMenu ul li{
+	height:100%;
+	line-height: 50px;
+	padding:0 32px;
+	float: left;
+	color:#fff;
+	font-size:16px;
+	cursor: pointer;
+}
+/*鼠标经过*/
+.liHover{
+	background:#3069CE;
+	font-weight: 600;
+}
+/*选中*/
+.liActive{
+	border-bottom: 4px solid #fff;
+	font-weight: 600;
+}
+
+.user{
+	position: absolute;
+	right: 30px;
+}
+.user .userName{
+	color: #fff;
+	font-size: 16px;
+	height: 54px;
+	line-height: 54px;
+}
+.user .userName a:hover ul{
+    display: block;
+}
+/*内容部分*/
+.content{
+	width:100%;
+	/*position: absolute;
+	top:54px;
+	bottom: 0;
+	left: 0;*/
+}
+/*左边菜单*/
+.leftMenu{
+	width:220px;
+	min-width: 220px;
+	height: 100%;
+	background: #fff;
+}
+.leftMenu span{
+	display: inline-block;
+	width: 100%;
+	line-height: 50px;
+	height: 50px;
+	font-size: 16px;
+	font-weight: 600px;
+	padding-left:50px; 
+}
+.leftMenu ul li{
+	/*width:220px;*/
+}
+.leftMenu ul li a{
+	display: inline-block;
+	width: 67%;
+	height: 48px;
+	line-height: 48px;
+	padding-left:70px;
+	font-size: 15px;
+	cursor: pointer;
+}
+.leftHover{
+	background: #EBF0FA;
+}
+.leftActive{
+	background-color:#EBF0FA;
+    color:#1858c8;
+    border-right:4px solid #0542c0;
+}
+/*右边内容部分*/
+.rightBody{
+	background: #f8f8f8;
+	/*min-width:1146px;*/
+    height: 100%;
+   position: absolute;
+   top:55px;
+   left: 220px;
+   bottom: 0;
+   right: 0;
+   overflow: auto;
+
+}
+
+/*表单*/
+.form-textContent{
+	overflow: hidden;
+}
+.form-textContent > div{
+	float: left;
+}
+.text,.select,.Date,.input{
+	width:50%;
+}
+.radioAndCheckbox{
+	float: none !important;
+}
+
+.tableIndex{
+	border: 1px solid #E2E6EB;
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 14px;
+    table-layout:fixed;
+    color:#000;
+    margin-bottom: 20px;
+}
+.tableIndex tr {
+    width: 100%;
+}
+.tableIndex th {
+	white-space: nowrap;
+    /*text-overflow: ellipsis;
+    overflow: hidden;*/
+    box-sizing: border-box;
+    border: 1px solid #E2E6EB;
+    font-weight: normal;
+    background:#F4F5F7;
+    color: #000;
+    border-color: #E2E6EB;
+    height: 32px;
+    padding:0 10px;
+  
+}
+.tableIndex td {
+    white-space: nowrap;
+   /* text-overflow: ellipsis;
+    overflow: hidden;*/
+    box-sizing: border-box;
+    border: 1px solid #E2E6EB;
+    height: 32px;
+    padding:0 10px;
+}
+
+.tab-code{
+	border:1px solid #e1e5ec;
+	padding: 10px;
+}
+.annotation{
+	color:#333;
+	font-size:12px;
+	font-weight: normal;
+}
+

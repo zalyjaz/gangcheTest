@@ -1,0 +1,186 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>文件上传</title>
+		<!-- <link rel="stylesheet" type="text/css" href="js/layui/css/layui.css" media="all">
+		<link rel="stylesheet" href="css/main.css"> -->
+		<link rel="stylesheet" href="../../Content/js/plugIn/layui/css/layui.css" media="all">
+		<link rel="stylesheet" href="../../Content/css/main.css">
+	</head>
+	<body>
+		<div class="fileUploadContianer form" >
+			<div class="fu-Body">
+				<div class="headerText-one">文件上传</div>
+				<div class="fu-content">
+					<span class="headerText-two">1、普通文件上传</span>
+					<div class="fu-contianer">
+						<input type="button" id="testBtn" value="选择文件上传" class="pc-btn pc-btn-primary">
+						<table class="pc-table pc-table-auto pc-table-center">
+							<thead>
+								<tr>
+									<th>文件名</th>
+									<th>大小</th>
+									<th>状态</th>
+									<th style="width:150px;">操作</th>
+								</tr>
+							</thead>
+							<tbody id="testList">
+								
+							</tbody>
+						</table>
+						<xmp>
+	layui.use('upload',function(){
+		var $ = layui.jquery,upload = layui.upload;
+		var testlistView=$("#testList");
+		var uploadListIns=upload.render({
+			elem:'#testBtn',
+			url:'/upload/',
+			accept:'file',
+			multiple:true,
+			auto:true,
+			// bindAction:'#testSubmit',
+			choose:function(obj){
+				var files=this.files=obj.pushFile();
+				obj.preview(function(index,file,result){
+					var tr=$(['<tr id="upload-'+index+'">',
+                              '<td>'+file.name+'</td>',
+                              '<td>'+(file.size/1024).toFixed(2)+'kb</td>',
+                              '<td>等待上传</td>',
+                              '<td>',
+                              '<a href="#" class="downloadFile pc-link-blue">下载</a>',
+                              '<a href="#" class="showFile pc-link-blue">预览</a>',
+                              '</td></tr>'
+						].join(""));
+					testlistView.append(tr);
+				});
+			}
+		});
+	});
+						</xmp>
+					</div>
+					<!-- <input type="button" value="上传" id="testSubmit"> -->
+				</div>
+
+				<div class="fu-content">
+					<span class="headerText-two">2、上传图片</span>
+					<div class="fu-contianer">
+						<input type="button" id="testBtn1" value="照片上传" class="pc-btn pc-btn-primary">
+						<blockquote class="layui-elem-quote layui-quote-nm" style="margin-top:10px;">
+							<div id="imagelist" class="layui-upload-list"></div>
+						</blockquote>
+					</div>
+					<xmp>
+	layui.use('upload',function(){
+		var $ = layui.jquery,upload = layui.upload;
+		//多个文件上传
+		upload.render({
+			elem:'#testBtn1',
+			url:'/upload/',
+			multiple:true,
+			accept:'file',
+			auto:false,
+			before:function(obj){
+             //预览本地文件，不支持IE8
+             obj.preview(function(index,file,result){
+             	$("#imagelist").append('<img src="'+result+'" alt="'+file.name+'" class="layui-upload-img">')
+             });
+			},
+			done:function(res){
+				//上传完成
+			}
+		});
+	});
+
+
+					</xmp>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+<!-- <script src="js/jquery.js"></script>
+<script type="text/javascript" src="js/layui/layui.js"></script> -->
+<script src="../../Content/js/plugIn/layui/layui.js"></script>
+<script>
+	//普通文件上传
+	layui.use('upload',function(){
+		var $ = layui.jquery,upload = layui.upload;
+		var testlistView=$("#testList");
+		var uploadListIns=upload.render({
+			elem:'#testBtn',
+			url:'/upload/',
+			accept:'file',
+			multiple:true,
+			auto:true,
+			// bindAction:'#testSubmit',
+			choose:function(obj){
+				var files=this.files=obj.pushFile();
+				obj.preview(function(index,file,result){
+					var tr=$(['<tr id="upload-'+index+'">',
+                              '<td>'+file.name+'</td>',
+                              '<td>'+(file.size/1024).toFixed(2)+'kb</td>',
+                              '<td>等待上传</td>',
+                              '<td>',
+                              '<a href="#" class="downloadFile pc-link-blue">下载</a>',
+                              '<a href="#" class="showFile pc-link-blue">预览</a>',
+                              '</td></tr>'
+						].join(""));
+					testlistView.append(tr);
+				});
+			}
+		});
+
+		//多个文件上传
+		upload.render({
+			elem:'#testBtn1',
+			url:'/upload/',
+			multiple:true,
+			accept:'file',
+			auto:false,
+			before:function(obj){
+             //预览本地文件，不支持IE8
+             obj.preview(function(index,file,result){
+             console.log(1);
+             	$("#imagelist").append('<img src="'+result+'" alt="'+file.name+'" class="layui-upload-img">')
+             });
+			},
+			done:function(res){
+				//上传完成
+			}
+		});
+	});
+
+
+	// layui.use('upload',function(){
+	// 	// var layer=layui.layer;
+	// 	var upload=layui.upload;//得到upload对象
+	// 	//创建一个上传组件
+	// 	var uploadInst=upload.render({
+	// 		elem:'#testBtn',//绑定上传按钮的id或class
+	// 		url:'/upload/',//上传的接口
+	// 		accept:'file',//指定上传时校验的文件类型，可选images（图片）、file（所有文件）、video（视频）、audio（音频）
+	// 		acceptMime:'image/png',//指定打开文件选择框时，筛选文件类型，值用逗号隔开。如image/*(只显示图片)、image/png,image/jpg(只显示jpg和png图片)
+	// 		exts:'pdf|doc|docx|xlsx|jpg|jpeg|png',//允许上传文件的后缀
+	// 		multiple:false,//是否允许多文件上传
+	// 		auto:true,//是否选完文件后自动上传，true上传，false需要设置bindAction参数来指向一个其他按钮提交上传
+	// 		// bindAction:'#btn',//指向一个按钮触发上传
+	// 		drag:false,//是否接受拖拽的文件上传
+	// 		done:function(res,index,upload){
+ //                //上传后回调,返回三个参数res(服务端响应信息)、index(当前文件的索引)、upload(重新上传的方法，一般在文件上传失败后使用)
+ //                layer.load(2,{
+ //                	shade:0.03
+ //                });
+ //                if(res.Status==='y'){
+ //                	layer.closeAll('loading');
+ //                	var data=JSON.parse(res.Data);
+ //                }
+	// 		},
+	// 		error:function(){
+ //                //请求异常回调
+	// 		}
+	// 	});
+	// });
+
+	
+</script>
